@@ -356,4 +356,16 @@ footer {
     padding: 16px 20px;
   }
 }
+  .twitch-box {
+  margin-top: 25px;
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.18);
+}
+
+.twitch-box iframe {
+  display: block;
+  border: none;
+}
 }
