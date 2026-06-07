@@ -9,29 +9,26 @@
 <body>
 
 <header class="site-header">
-    <span class="brand-text">PHANTOM MILLZ</span>
+  <div class="brand-text">PHANTOM MILLZ</div>
 
-    <a href="watch.html" class="header-button">
-        Watch Live
-    </a>
+  <button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+    ☰
+  </button>
 </header>
-  <section class="page-nav">
 
-    <a href="index.html" class="page-nav-card">
-        <h3>Home</h3>
-        <p>Return to the Phantom Realm</p>
-    </a>
+<aside class="side-menu">
+  <button class="close-menu" onclick="document.body.classList.remove('menu-open')">
+    ×
+  </button>
 
-    <a href="about.html" class="page-nav-card">
-        <h3>About</h3>
-        <p>Meet Phantom Millz</p>
-    </a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="watch.html">Watch Live</a>
+  <a href="#">Community</a>
+  <a href="https://www.twitch.tv/pmillz01">Twitch</a>
+</aside>
 
-    <a href="watch.html" class="page-nav-card active">
-        <h3>Watch Live</h3>
-        <p>Join the stream</p>
-    </a>
-
+<div class="menu-overlay" onclick="document.body.classList.remove('menu-open')"></div>
 </section>
 
 <header class="hero small-hero">
