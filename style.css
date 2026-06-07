@@ -302,90 +302,89 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 22px 8%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.35), transparent);
+  padding: 20px 8%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-}
-
-.brand-logo {
+.menu-toggle {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,0,0,0.35);
+  color: white;
+  font-size: 1.7rem;
   width: 48px;
   height: 48px;
-}
-  
-.brand-text {
-  color: white;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.header-button {
-  padding: 12px 22px;
-  border-radius: 10px;
-  background: #b30000;
-  color: white;
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  z-index: 2000;
+
+  background: #050505;
+  border-left: 1px solid rgba(255,0,0,0.35);
+  box-shadow: -20px 0 50px rgba(0,0,0,0.8);
+
+  padding: 90px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  transition: 0.35s ease;
+}
+
+.side-menu a {
+  color: #ddd;
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
-.header-button:hover {
-  background: #ff1f1f;
+.side-menu a:hover {
+  color: #ff3333;
 }
 
-@media (max-width: 700px) {
-  .brand-text {
-    display: none;
-  }
+.close-menu {
+  position: absolute;
+  top: 25px;
+  right: 28px;
 
-  .site-header {
-    padding: 16px 20px;
-  }
-}
-  .twitch-box {
-  margin-top: 25px;
-  border: 1px solid rgba(255, 0, 0, 0.35);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 0 35px rgba(255, 0, 0, 0.18);
-}
-
-.twitch-box iframe {
-  display: block;
+  background: none;
   border: none;
-}
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.header-link {
-    color: #bdbdbd;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s;
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1500;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
 }
 
-.header-link:hover {
-    color: white;
+.menu-open .side-menu {
+  right: 0;
 }
 
-.header-button.active {
-    background: #ff1f1f;
+.menu-open .menu-overlay {
+  opacity: 1;
+  pointer-events: all;
 }
 }
