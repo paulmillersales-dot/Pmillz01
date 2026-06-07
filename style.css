@@ -299,4 +299,17 @@ footer {
   .site-header {
     padding: 16px 20px;
   }
+  .side-menu a.active {
+  color: #ff3333;
+
+  background: rgba(255, 0, 0, 0.12);
+
+  border-left: 3px solid #ff3333;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+}
 }
