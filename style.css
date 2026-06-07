@@ -54,8 +54,9 @@ body::before {
 .hero {
   min-height: 100vh;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,0.2), #030303),
-    url("https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=1600&q=80");
+    radial-gradient(circle at center, rgba(160, 0, 0, 0.35), transparent 40%),
+    linear-gradient(to bottom, rgba(0,0,0,0.25), #030303),
+    linear-gradient(135deg, #120000, #030303 45%, #1a0000);
   background-size: cover;
   background-position: center;
   display: flex;
