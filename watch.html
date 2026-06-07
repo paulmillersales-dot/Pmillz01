@@ -11,15 +11,11 @@
 <header class="site-header">
   <div class="brand-text">PHANTOM MILLZ</div>
 
-  <button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
-    ☰
-  </button>
+  <button class="menu-toggle" id="menuToggle">☰</button>
 </header>
 
-<aside class="side-menu">
-  <button class="close-menu" onclick="document.body.classList.remove('menu-open')">
-    ×
-  </button>
+<aside class="side-menu" id="sideMenu">
+  <button class="close-menu" id="closeMenu">×</button>
 
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -28,8 +24,7 @@
   <a href="https://www.twitch.tv/pmillz01">Twitch</a>
 </aside>
 
-<div class="menu-overlay" onclick="document.body.classList.remove('menu-open')"></div>
-</section>
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <header class="hero small-hero">
   <div class="hero-content">
