@@ -368,4 +368,24 @@ footer {
   display: block;
   border: none;
 }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-link {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header-link:hover {
+    color: white;
+}
+
+.header-button.active {
+    background: #ff1f1f;
+}
 }
