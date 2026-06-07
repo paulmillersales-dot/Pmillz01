@@ -319,19 +319,12 @@ footer {
   text-decoration: none;
 }
 
-.brand-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #b30000, #250000);
-  display: grid;
-  place-items: center;
-  color: white;
-  font-weight: 900;
-  letter-spacing: 1px;
-  box-shadow: 0 10px 35px rgba(255,0,0,0.25);
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.45));
 }
-
 .brand-text {
   color: white;
   font-weight: 900;
