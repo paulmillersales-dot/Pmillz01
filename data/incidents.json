@@ -1,7 +1,16 @@
-{
-    "id":  1,
-    "entity":  "Test Entity",
-    "date":  "2026-06-12 13:31:06",
-    "outcome":  "Test Successful",
-    "details":  "Streamer.bot updated the website automatically."
-}
+[
+    {
+        "id":  2,
+        "entity":  "Test Entity",
+        "date":  "2026-06-12 13:33:00",
+        "outcome":  "Test Successful",
+        "details":  "Streamer.bot updated the website automatically."
+    },
+    {
+        "id":  1,
+        "entity":  "Test Entity",
+        "date":  "2026-06-12 13:31:06",
+        "outcome":  "Test Successful",
+        "details":  "Streamer.bot updated the website automatically."
+    }
+]
