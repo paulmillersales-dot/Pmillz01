@@ -80,6 +80,14 @@
     </div>
   </section>
 
+  <section class="section">
+    <h2>Recent Incident Reports</h2>
+
+    <div id="incident-container">
+        Loading archive records...
+    </div>
+  </section>
+  
   <section class="lore">
     <h2>The Archive Lore</h2>
     <p>
@@ -118,6 +126,39 @@
 <footer>
   <p>© 2026 Phantom Millz • The Archive Remembers</p>
 </footer>
+<script>
+async function loadIncidents() {
 
+    try {
+
+        const response = await fetch('data/incidents.json');
+        const incidents = await response.json();
+
+        const container = document.getElementById('incident-container');
+
+        container.innerHTML = '';
+
+        incidents.slice(0, 10).forEach(incident => {
+
+            container.innerHTML += `
+                <div class="card">
+                    <h3>${incident.entity}</h3>
+                    <p><strong>Date:</strong> ${incident.date}</p>
+                    <p><strong>Outcome:</strong> ${incident.outcome}</p>
+                    <p>${incident.details}</p>
+                </div>
+            `;
+        });
+
+    }
+    catch {
+
+        document.getElementById('incident-container').innerHTML =
+            '<p>Unable to access archive records.</p>';
+    }
+}
+
+loadIncidents();
+</script>
 </body>
 </html>
