@@ -37,6 +37,59 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+/* Phantom Forge */
+
+.forge-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.forge-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid crimson;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.25);
+    text-align: center;
+}
+
+.forge-card h2 {
+    color: crimson;
+    margin-bottom: 15px;
+}
+
+.forge-card p {
+    line-height: 1.6;
+}
+
+.forge-card ol,
+.forge-card ul {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.redeem-box {
+    background: rgba(40, 0, 0, 0.5);
+    border: 1px solid rgba(220, 20, 60, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 650px;
+}
+
+.redeem-box h3 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+.forge-status {
+    color: #ff4d6d;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
 /* Header + Side Menu */
 
