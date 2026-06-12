@@ -1,1 +1,7 @@
-[]
+{
+    "id":  1,
+    "entity":  "Test Entity",
+    "date":  "2026-06-12 13:47:53",
+    "outcome":  "Test Successful",
+    "details":  "Streamer.bot updated the website automatically."
+}
