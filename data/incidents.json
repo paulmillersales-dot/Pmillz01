@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "id":  2,
+        "entity":  "Test Entity",
+        "date":  "2026-06-12 13:44:15",
+        "outcome":  "Test Successful",
+        "details":  "Streamer.bot updated the website automatically."
+    },
+    {
+        "value":  [
+
+                  ],
+        "Count":  0
+    }
+]
