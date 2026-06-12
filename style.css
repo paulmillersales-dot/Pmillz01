@@ -387,5 +387,50 @@ footer {
 
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
 }
+  .forge-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.forge-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid crimson;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.25);
+  text-align: center;
+}
+
+.forge-card h2 {
+  color: crimson;
+  margin-bottom: 12px;
+}
+
+.forge-card ol,
+.forge-card ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.redeem-box {
+  border: 1px solid rgba(220, 20, 60, 0.5);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 15px auto;
+  max-width: 600px;
+  background: rgba(60, 0, 0, 0.35);
+}
+
+.redeem-box h3 {
+  color: #ff4d6d;
+}
+
+.forge-status {
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  font-weight: bold;
+}
   
 }
