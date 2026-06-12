@@ -44,6 +44,57 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.live-status-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.live-card {
+  max-width: 760px;
+  width: 100%;
+  background: rgba(10, 0, 0, 0.9);
+  border: 2px solid #b30000;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.live-pill {
+  display: inline-block;
+  background: #b30000;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.live-button {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 12px 22px;
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+.live-button:hover {
+  background: #cc0000;
+}
+
+.twitch-embed iframe {
+  max-width: 100%;
+  border: 2px solid #660000;
+  border-radius: 12px;
+}
+
 .site-header {
   position: fixed;
   top: 0;
