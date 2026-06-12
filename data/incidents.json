@@ -1,16 +1,1 @@
-[
-    {
-        "id":  2,
-        "entity":  "The Shadow Entity",
-        "date":  "2026-06-12 18:23:47",
-        "outcome":  "Contained",
-        "details":  "Test incident created while building automatic entity stats."
-    },
-    {
-        "id":  1,
-        "entity":  "The Shadow Entity",
-        "date":  "2026-06-12 14:35:14",
-        "outcome":  "Contained",
-        "details":  "Test incident created while building automatic entity stats."
-    }
-]
+[]
