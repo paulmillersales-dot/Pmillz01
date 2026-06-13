@@ -381,10 +381,14 @@ main {
 }
 
 #archive-stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+#archive-stats-container .card {
+    width: 300px;
 }
 
 .btn {
