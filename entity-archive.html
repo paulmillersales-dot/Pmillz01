@@ -65,6 +65,14 @@
     </p>
   </section>
 
+  <section class="section">
+  <h2>📊 Archive Statistics</h2>
+
+  <div id="archive-stats-container" class="cards">
+    Loading archive statistics...
+    </div>
+  </section>
+  
   <section class="cards">
     <div class="card">
       <h3>💀 Boss Hunt Records</h3>
@@ -194,8 +202,50 @@ async function loadArchive() {
         const incidents = data.incidents || [];
         const entities = data.entities || [];
 
+        if (statsContainer) {
+          const totalIncidents = incidents.length;
+          const totalEntities = entities.length;
+
+          const totalContainments = incidents.filter(incident =>
+              incident.outcome === 'Contained' || incident.outcome === 'Defeated'
+          ).length;
+
+          let mostEncountered = 'No entities recorded yet';
+          let highestSeen = 0;
+
+          entities.forEach(entity => {
+              if (entity.timesSeen > highestSeen) {
+                  highestSeen = entity.timesSeen;
+                  mostEncountered = entity.name;
+              }
+          });
+
+          statsContainer.innerHTML = `
+              <div class="card">
+                  <h3>⚠️ Total Incidents</h3>
+                  <p><strong>${totalIncidents}</strong></p>
+              </div>
+
+              <div class="card">
+                  <h3>👁️ Known Entities</h3>
+                  <p><strong>${totalEntities}</strong></p>
+              </div>
+
+              <div class="card">
+                  <h3>✅ Containments</h3>
+                  <p><strong>${totalContainments}</strong></p>
+              </div>
+
+              <div class="card">
+                  <h3>📌 Most Encountered</h3>
+                  <p><strong>${mostEncountered}</strong></p>
+              </div>
+          `;
+      }
+
         const incidentContainer = document.getElementById('incident-container');
         const entityContainer = document.getElementById('entity-container');
+        const statsContainer = document.getElementById('archive-stats-container');
 
         if (incidentContainer) {
             incidentContainer.innerHTML = '';
