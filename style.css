@@ -91,6 +91,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+#incident-container,
+#entity-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    justify-content: center;
+    gap: 20px;
+}
+
+
 /* Header + Side Menu */
 
 #menu-check {
