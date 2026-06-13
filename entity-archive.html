@@ -195,57 +195,62 @@ const entityLore = {
 };
 
 async function loadArchive() {
+    const statsContainer = document.getElementById('archive-stats-container');
+    const incidentContainer = document.getElementById('incident-container');
+    const entityContainer = document.getElementById('entity-container');
+
     try {
         const response = await fetch('data/archive.json?cache=' + Date.now());
+
+        if (!response.ok) {
+            throw new Error('Could not load archive.json');
+        }
+
         const data = await response.json();
 
         const incidents = data.incidents || [];
         const entities = data.entities || [];
 
         if (statsContainer) {
-          const totalIncidents = incidents.length;
-          const totalEntities = entities.length;
+            const totalIncidents = incidents.length;
+            const totalEntities = entities.length;
 
-          const totalContainments = incidents.filter(incident =>
-              incident.outcome === 'Contained' || incident.outcome === 'Defeated'
-          ).length;
+            const totalContainments = incidents.filter(incident =>
+                incident.outcome === 'Contained' || incident.outcome === 'Defeated'
+            ).length;
 
-          let mostEncountered = 'No entities recorded yet';
-          let highestSeen = 0;
+            let mostEncountered = 'No entities recorded yet';
+            let highestSeen = 0;
 
-          entities.forEach(entity => {
-              if (entity.timesSeen > highestSeen) {
-                  highestSeen = entity.timesSeen;
-                  mostEncountered = entity.name;
-              }
-          });
+            entities.forEach(entity => {
+                if (Number(entity.timesSeen) > highestSeen) {
+                    highestSeen = Number(entity.timesSeen);
+                    mostEncountered = entity.name;
+                }
+            });
 
-          statsContainer.innerHTML = `
-              <div class="card">
-                  <h3>⚠️ Total Incidents</h3>
-                  <p><strong>${totalIncidents}</strong></p>
-              </div>
+            statsContainer.innerHTML = `
+                <div class="card">
+                    <h3>⚠️ Total Incidents</h3>
+                    <p><strong>${totalIncidents}</strong></p>
+                </div>
 
-              <div class="card">
-                  <h3>👁️ Known Entities</h3>
-                  <p><strong>${totalEntities}</strong></p>
-              </div>
+                <div class="card">
+                    <h3>👁️ Known Entities</h3>
+                    <p><strong>${totalEntities}</strong></p>
+                </div>
 
-              <div class="card">
-                  <h3>✅ Containments</h3>
-                  <p><strong>${totalContainments}</strong></p>
-              </div>
+                <div class="card">
+                    <h3>✅ Containments</h3>
+                    <p><strong>${totalContainments}</strong></p>
+                </div>
 
-              <div class="card">
-                  <h3>📌 Most Encountered</h3>
-                  <p><strong>${mostEncountered}</strong></p>
-              </div>
-          `;
-      }
-
-        const incidentContainer = document.getElementById('incident-container');
-        const entityContainer = document.getElementById('entity-container');
-        const statsContainer = document.getElementById('archive-stats-container');
+                <div class="card">
+                    <h3>📌 Most Encountered</h3>
+                    <p><strong>${mostEncountered}</strong></p>
+                </div>
+            `;
+        }
 
         if (incidentContainer) {
             incidentContainer.innerHTML = '';
@@ -300,14 +305,16 @@ async function loadArchive() {
     catch (error) {
         console.error(error);
 
-        if (document.getElementById('incident-container')) {
-            document.getElementById('incident-container').innerHTML =
-                '<p>Unable to access incident records.</p>';
+        if (statsContainer) {
+            statsContainer.innerHTML = '<p>Unable to access archive statistics.</p>';
         }
 
-        if (document.getElementById('entity-container')) {
-            document.getElementById('entity-container').innerHTML =
-                '<p>Unable to access entity records.</p>';
+        if (incidentContainer) {
+            incidentContainer.innerHTML = '<p>Unable to access incident records.</p>';
+        }
+
+        if (entityContainer) {
+            entityContainer.innerHTML = '<p>Unable to access entity records.</p>';
         }
     }
 }
