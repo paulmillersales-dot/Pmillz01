@@ -127,38 +127,74 @@
   <p>© 2026 Phantom Millz • The Archive Remembers</p>
 </footer>
 <script>
-async function loadIncidents() {
-
+async function loadArchive() {
     try {
+        const response = await fetch('data/archive.json?cache=' + Date.now());
+        const data = await response.json();
 
-        const response = await fetch('data/incidents.json');
-        const incidents = await response.json();
+        const incidents = data.incidents || [];
+        const entities = data.entities || [];
 
-        const container = document.getElementById('incident-container');
+        const incidentContainer = document.getElementById('incident-container');
+        const entityContainer = document.getElementById('entity-container');
 
-        container.innerHTML = '';
+        if (incidentContainer) {
+            incidentContainer.innerHTML = '';
 
-        incidents.slice(0, 10).forEach(incident => {
+            if (incidents.length === 0) {
+                incidentContainer.innerHTML = '<p>No incident reports recorded yet.</p>';
+            } else {
+                incidents.slice(0, 10).forEach(incident => {
+                    incidentContainer.innerHTML += `
+                        <div class="card">
+                            <h3>⚠️ ${incident.entity}</h3>
+                            <p><strong>Date:</strong> ${incident.date}</p>
+                            <p><strong>Status:</strong> ${incident.outcome}</p>
+                            <p><strong>Final Blow:</strong> ${incident.killer || 'Unknown'}</p>
+                            <p>${incident.details}</p>
+                        </div>
+                    `;
+                });
+            }
+        }
 
-            container.innerHTML += `
-                <div class="card">
-                    <h3>${incident.entity}</h3>
-                    <p><strong>Date:</strong> ${incident.date}</p>
-                    <p><strong>Outcome:</strong> ${incident.outcome}</p>
-                    <p>${incident.details}</p>
-                </div>
-            `;
-        });
+        if (entityContainer) {
+            entityContainer.innerHTML = '';
 
+            if (entities.length === 0) {
+                entityContainer.innerHTML = '<p>No entity records available yet.</p>';
+            } else {
+                entities.forEach(entity => {
+                    entityContainer.innerHTML += `
+                        <div class="card">
+                            <h3>👁️ ${entity.name}</h3>
+                            <p><strong>Status:</strong> ${entity.status}</p>
+                            <p><strong>Times Seen:</strong> ${entity.timesSeen}</p>
+                            <p><strong>Times Defeated:</strong> ${entity.timesDefeated}</p>
+                            <p><strong>Last Seen:</strong> ${entity.lastSeen}</p>
+                        </div>
+                    `;
+                });
+            }
+        }
     }
-    catch {
+    catch (error) {
+        console.error(error);
 
-        document.getElementById('incident-container').innerHTML =
-            '<p>Unable to access archive records.</p>';
+        const incidentContainer = document.getElementById('incident-container');
+        const entityContainer = document.getElementById('entity-container');
+
+        if (incidentContainer) {
+            incidentContainer.innerHTML = '<p>Unable to access incident records.</p>';
+        }
+
+        if (entityContainer) {
+            entityContainer.innerHTML = '<p>Unable to access entity records.</p>';
+        }
     }
 }
 
-loadIncidents();
+loadArchive();
 </script>
 </body>
 </html>
