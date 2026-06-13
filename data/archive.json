@@ -18,4 +18,22 @@
                          "lastSeen":  "2026-06-13 07:34:29"
                      }
                  ]
+    "hallOfFame": {
+    "topHunter": {
+      "name": "Awaiting first hunter...",
+      "value": 0
+    },
+    "mostCorrupted": {
+      "name": "Awaiting corruption...",
+      "value": 0
+    },
+    "topHealer": {
+      "name": "Awaiting entity sympathiser...",
+      "value": 0
+    },
+    "mostRemembered": {
+      "name": "Awaiting entity hatred...",
+      "value": 0
+    }
+  }
 }
