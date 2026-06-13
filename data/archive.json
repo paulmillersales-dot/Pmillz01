@@ -1,24 +1,24 @@
 {
-    "incidents":  [
-                      {
-                          "id":  1,
-                          "entity":  "The Broadcast",
-                          "date":  "2026-06-13 07:34:29",
-                          "outcome":  "Contained",
-                          "killer":  "PmillZ01",
-                          "details":  "The Broadcast was defeated by PmillZ01 during Boss Hunt."
-                      }
-                  ],
-    "entities":  [
-                     {
-                         "name":  "The Broadcast",
-                         "status":  "Contained",
-                         "timesSeen":  1,
-                         "timesDefeated":  1,
-                         "lastSeen":  "2026-06-13 07:34:29"
-                     }
-                 ]
-    "hallOfFame": {
+  "incidents": [
+    {
+      "id": 1,
+      "entity": "The Broadcast",
+      "date": "2026-06-13 07:34:29",
+      "outcome": "Contained",
+      "killer": "PmillZ01",
+      "details": "The Broadcast was defeated by PmillZ01 during Boss Hunt."
+    }
+  ],
+  "entities": [
+    {
+      "name": "The Broadcast",
+      "status": "Contained",
+      "timesSeen": 1,
+      "timesDefeated": 1,
+      "lastSeen": "2026-06-13 07:34:29"
+    }
+  ],
+  "hallOfFame": {
     "topHunter": {
       "name": "Awaiting first hunter...",
       "value": 0
