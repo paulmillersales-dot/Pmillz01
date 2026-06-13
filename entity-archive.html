@@ -135,6 +135,57 @@
   <p>© 2026 Phantom Millz • The Archive Remembers</p>
 </footer>
 <script>
+const entityLore = {
+    "The Shadow Entity": {
+        icon: "🌑",
+        threat: "High",
+        classification: "Shadow-Based Entity",
+        notes: "Thrives in darkness and weakens repeated hunters."
+    },
+    "The Eldritch One": {
+        icon: "🐙",
+        threat: "Severe",
+        classification: "Reality Distortion Entity",
+        notes: "Reality bends around its wounds. Prolonged exposure is not advised."
+    },
+    "The Marionette King": {
+        icon: "🎭",
+        threat: "High",
+        classification: "Control / Manipulation Entity",
+        notes: "Known to avoid attacks by pulling the strings of reality itself."
+    },
+    "The Broadcast": {
+        icon: "📺",
+        threat: "High",
+        classification: "Signal-Based Anomaly",
+        notes: "Distorts damage and feeds from transmission-based interference."
+    },
+    "The Flesh Hive": {
+        icon: "🩸",
+        threat: "Severe",
+        classification: "Biological Hive Entity",
+        notes: "Grows stronger from offerings and corrupted healing attempts."
+    },
+    "The Cult Mother": {
+        icon: "🕯️",
+        threat: "High",
+        classification: "Cult Influence Entity",
+        notes: "Welcomes those who strengthen hostile entities. Do not answer the whispers."
+    },
+    "The Frozen Watcher": {
+        icon: "❄️",
+        threat: "Moderate",
+        classification: "Observation / Stasis Entity",
+        notes: "Often ignores weak attacks. Movement is rare. Attention is constant."
+    },
+    "The Mirror Thing": {
+        icon: "🪞",
+        threat: "Unstable",
+        classification: "Reflective Anomaly",
+        notes: "May reverse intent. Attacks and healing are not always what they seem."
+    }
+};
+
 async function loadArchive() {
     try {
         const response = await fetch('data/archive.json?cache=' + Date.now());
@@ -173,13 +224,23 @@ async function loadArchive() {
                 entityContainer.innerHTML = '<p>No entity records available yet.</p>';
             } else {
                 entities.forEach(entity => {
+                    const lore = entityLore[entity.name] || {
+                        icon: "👁️",
+                        threat: "Unknown",
+                        classification: "Unclassified Entity",
+                        notes: "Insufficient archive data. Further observation required."
+                    };
+
                     entityContainer.innerHTML += `
                         <div class="card">
-                            <h3>👁️ ${entity.name}</h3>
+                            <h3>${lore.icon} ${entity.name}</h3>
                             <p><strong>Status:</strong> ${entity.status}</p>
+                            <p><strong>Threat Level:</strong> ${lore.threat}</p>
+                            <p><strong>Classification:</strong> ${lore.classification}</p>
                             <p><strong>Times Seen:</strong> ${entity.timesSeen}</p>
                             <p><strong>Times Defeated:</strong> ${entity.timesDefeated}</p>
                             <p><strong>Last Seen:</strong> ${entity.lastSeen}</p>
+                            <p class="small">${lore.notes}</p>
                         </div>
                     `;
                 });
@@ -189,15 +250,14 @@ async function loadArchive() {
     catch (error) {
         console.error(error);
 
-        const incidentContainer = document.getElementById('incident-container');
-        const entityContainer = document.getElementById('entity-container');
-
-        if (incidentContainer) {
-            incidentContainer.innerHTML = '<p>Unable to access incident records.</p>';
+        if (document.getElementById('incident-container')) {
+            document.getElementById('incident-container').innerHTML =
+                '<p>Unable to access incident records.</p>';
         }
 
-        if (entityContainer) {
-            entityContainer.innerHTML = '<p>Unable to access entity records.</p>';
+        if (document.getElementById('entity-container')) {
+            document.getElementById('entity-container').innerHTML =
+                '<p>Unable to access entity records.</p>';
         }
     }
 }
