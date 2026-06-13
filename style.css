@@ -380,6 +380,13 @@ main {
   color: #bbb;
 }
 
+#archive-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
+    gap: 20px;
+}
+
 .btn {
   display: inline-block;
   margin-top: 18px;
