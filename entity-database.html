@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Millz | Entity Database</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-check">
+
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
+
+<label for="menu-check" class="menu-overlay"></label>
+
+<aside class="side-menu">
+  <label for="menu-check" class="close-menu">×</label>
+
+  <a href="index.html">🏠 Home</a>
+  <a href="about.html">👤 About</a>
+  <a href="watch.html">📺 Live</a>
+  <a href="community.html">👻 Community</a>
+  <a href="content.html">🎥 Content</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="phantom-forge.html">⚒️ Phantom Forge</a>
+  <a href="hall-of-fame.html">🏆 Hall of Fame</a>
+  <a href="entity-hunt.html">🔍 Entity Hunt</a>
+  <a href="entity-archive.html">📜 Entity Archive</a>
+  <a href="entity-database.html" class="active">🗂️ Entity Database</a>
+  <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
+</aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">PHANTOM REALM DATABASE</p>
+    <h1>ENTITY DATABASE</h1>
+    <p class="tagline">Classified Files • Threat Records • Containment Access</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <h2>🗂️ Phantom Realm Entity Database</h2>
+  <p>
+    This database contains classified records for known hostile entities encountered
+    within the Phantom Realm.
+  </p>
+  <p>
+    Access to entity files is restricted. Proceed with caution.
+  </p>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>📜 Entity Archive</h3>
+    <p>View recorded incidents, containments, and automatically logged entity data.</p>
+    <a href="entity-archive.html" class="btn primary">Open Archive</a>
+  </div>
+
+  <div class="card">
+    <h3>🏆 Hall of Fame</h3>
+    <p>View the hunters, corrupted souls, and researchers who left their mark.</p>
+    <a href="hall-of-fame.html" class="btn primary">View Records</a>
+  </div>
+
+  <div class="card">
+    <h3>🔍 Entity Hunt</h3>
+    <p>Learn how to identify active anomalies during stream investigations.</p>
+    <a href="entity-hunt.html" class="btn primary">Read Guide</a>
+  </div>
+</section>
+
+<section class="section dark-box">
+  <h2>⚠️ Known Entity Files</h2>
+  <p class="small">
+    Warning: Each file requires clearance confirmation before access.
+  </p>
+
+  <div class="game-grid">
+    <a href="entities/broadcast-warning.html" class="game">📺 The Broadcast<br><span class="small">Threat: High</span></a>
+    <a href="entities/shadow-entity-warning.html" class="game">🌑 The Shadow Entity<br><span class="small">Threat: High</span></a>
+    <a href="entities/eldritch-one-warning.html" class="game">🐙 The Eldritch One<br><span class="small">Threat: Severe</span></a>
+    <a href="entities/marionette-king-warning.html" class="game">🎭 The Marionette King<br><span class="small">Threat: High</span></a>
+    <a href="entities/flesh-hive-warning.html" class="game">🩸 The Flesh Hive<br><span class="small">Threat: Severe</span></a>
+    <a href="entities/cult-mother-warning.html" class="game">🕯️ The Cult Mother<br><span class="small">Threat: High</span></a>
+    <a href="entities/frozen-watcher-warning.html" class="game">❄️ The Frozen Watcher<br><span class="small">Threat: Moderate</span></a>
+    <a href="entities/mirror-thing-warning.html" class="game">🪞 The Mirror Thing<br><span class="small">Threat: Unstable</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>📊 Database Status</h2>
+  <div id="database-stats" class="cards">
+    Loading database records...
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Phantom Millz • Access Is Logged</p>
+</footer>
+
+<script>
+async function loadDatabaseStats() {
+  try {
+    const response = await fetch('data/archive.json?cache=' + Date.now());
+    const data = await response.json();
+
+    const incidents = data.incidents || [];
+    const entities = data.entities || [];
+
+    const totalContainments = incidents.filter(incident =>
+      incident.outcome === 'Contained' || incident.outcome === 'Defeated'
+    ).length;
+
+    document.getElementById('database-stats').innerHTML = `
+      <div class="card">
+        <h3>⚠️ Recorded Incidents</h3>
+        <p><strong>${incidents.length}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>👁️ Entities Encountered</h3>
+        <p><strong>${entities.length}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>✅ Successful Containments</h3>
+        <p><strong>${totalContainments}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Database Status</h3>
+        <p><strong>ACTIVE</strong></p>
+      </div>
+    `;
+  }
+  catch {
+    document.getElementById('database-stats').innerHTML =
+      '<p>Unable to access database records.</p>';
+  }
+}
+
+loadDatabaseStats();
+</script>
+
+</body>
+</html>
