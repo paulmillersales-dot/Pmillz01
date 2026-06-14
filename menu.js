@@ -21,3 +21,23 @@ function loadMenu() {
 }
 
 loadMenu();
+
+highlightCurrentPage();
+
+function highlightCurrentPage() {
+    const currentPage = window.location.pathname.split('/').pop();
+
+    document.querySelectorAll('#site-menu a').forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (href && href.endsWith(currentPage)) {
+            link.classList.add('active');
+        }
+    });
+
+    if (window.location.pathname.includes('/entities/')) {
+        document
+            .querySelector('a[href*="entity-database"]')
+            ?.classList.add('active');
+    }
+}
