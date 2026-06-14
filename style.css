@@ -39,6 +39,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Phantom Forge */
 
+.containment-list {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.containment-list li {
+  margin: 12px 0;
+}
+
 .forge-page {
     max-width: 1000px;
     margin: 0 auto;
