@@ -66,9 +66,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-item {
+    position: relative;
     margin: 30px auto;
-    padding-left: 25px;
-    border-left: 2px solid crimson;
+    padding-left: 30px;
+}
+
+.timeline-item::before {
+    content: "⚠";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: crimson;
 }
 
 .timeline-date {
