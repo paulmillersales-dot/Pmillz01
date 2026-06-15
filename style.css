@@ -37,6 +37,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+#entity-live-record {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#entity-live-record .card {
+    width: 300px;
+}
+
 #database-stats {
     display: flex;
     flex-wrap: wrap;
