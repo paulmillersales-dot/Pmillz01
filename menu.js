@@ -15,6 +15,7 @@ function loadMenu() {
     <a href="${prefix}entity-database.html">🗂️ Entity Database</a>
     <a href="${prefix}entity-archive.html">📜 Entity Archive</a>
     <a href="${prefix}incident-timeline.html">📅 Incident Timeline</a>
+    <a href="${prefix}research-division.html">🧪 Research Division</a>
     <a href="${prefix}entity-hunt.html">🔍 Entity Hunt</a>
     <a href="${prefix}hall-of-fame.html">🏆 Hall of Fame</a>
     <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
