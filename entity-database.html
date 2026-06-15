@@ -30,6 +30,12 @@
   </div>
 </header>
 
+  <br>
+
+<button class="btn primary" onclick="openRandomEntity()">
+    🎲 OPEN REDACTED FILE
+</button>
+
 <main>
 
 <section class="section">
@@ -93,6 +99,27 @@
 <footer>
   <p>© 2026 Phantom Millz • Access Is Logged</p>
 </footer>
+
+  <script>
+function openRandomEntity() {
+
+    const entities = [
+        'entities/broadcast-warning.html',
+        'entities/shadow-entity-warning.html',
+        'entities/eldritch-one-warning.html',
+        'entities/marionette-king-warning.html',
+        'entities/flesh-hive-warning.html',
+        'entities/cult-mother-warning.html',
+        'entities/frozen-watcher-warning.html',
+        'entities/mirror-thing-warning.html'
+    ];
+
+    const randomEntity =
+        entities[Math.floor(Math.random() * entities.length)];
+
+    window.location.href = randomEntity;
+}
+</script>
 
 <script>
 async function loadDatabaseStats() {
