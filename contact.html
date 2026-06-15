@@ -83,5 +83,34 @@
   <p>© 2026 Phantom Millz • All Portals Lead Home</p>
 </footer>
 <script src="menu.js"></script>
+  <script>
+
+const footerMessages = [
+
+    "Command Is Watching",
+    "The Signal Persists",
+    "Do Not Trust Reflections",
+    "Archive Integrity: Questionable",
+    "Containment Failed",
+    "The Hive Still Hungers",
+    "Mother Is Listening",
+    "The Broadcast Continues",
+    "This File Is Monitored"
+];
+
+const footer =
+    document.querySelector("footer p");
+
+if (footer) {
+
+    footer.innerHTML =
+        "© 2026 Phantom Millz • " +
+        footerMessages[
+            Math.floor(Math.random() *
+            footerMessages.length)
+        ];
+}
+
+</script>
 </body>
 </html>
