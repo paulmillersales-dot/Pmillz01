@@ -56,7 +56,13 @@
         community chaos, and streams that feel like stepping into a cursed lobby.
       </p>
     </section>
+<section class="section dark-box">
+    <h2>⚠ Latest Incident</h2>
 
+    <div id="latest-incident">
+        Loading incident report...
+    </div>
+</section>
     <section class="live-status-section">
     <div class="live-card">
       <div class="live-pill">🔴 STREAM STATUS</div>
@@ -135,6 +141,46 @@
   </footer>
 
 <script src="menu.js"></script>
-  
+<script>
+async function loadLatestIncident() {
+
+    const container = document.getElementById('latest-incident');
+
+    try {
+
+        const response =
+            await fetch('data/archive.json?cache=' + Date.now());
+
+        const data = await response.json();
+
+        const incidents = data.incidents || [];
+
+        if (incidents.length === 0) {
+            container.innerHTML =
+                '<p>No incidents recorded.</p>';
+            return;
+        }
+
+        const latest =
+            incidents[incidents.length - 1];
+
+        container.innerHTML = `
+            <div class="card">
+                <h3>${latest.entity}</h3>
+                <p><strong>Status:</strong> ${latest.outcome}</p>
+                <p><strong>Hunter:</strong> ${latest.killer}</p>
+                <p><strong>Date:</strong> ${latest.date}</p>
+            </div>
+        `;
+    }
+    catch {
+
+        container.innerHTML =
+            '<p>Unable to access archive.</p>';
+    }
+}
+
+loadLatestIncident();
+</script>
 </body>
 </html>
