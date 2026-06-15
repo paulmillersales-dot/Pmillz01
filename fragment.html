@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Millz | Archive Fragment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-check">
+
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
+
+<label for="menu-check" class="menu-overlay"></label>
+
+<aside class="side-menu" id="site-menu"></aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">CLASSIFIED RECOVERY</p>
+    <h1>ARCHIVE FRAGMENT</h1>
+    <p class="tagline">Recovered Code • Temporary Access • Stream Reward</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <h2>🔓 Fragment Recovered</h2>
+  <p>
+    A classified archive fragment has been located.
+  </p>
+  <p>
+    If valid, this code may be redeemed live on stream using the Secret Archive Code reward.
+  </p>
+</section>
+
+<section class="section dark-box">
+  <h2>📁 Fragment Data</h2>
+
+  <div id="fragment-box" class="cards">
+    Decrypting archive fragment...
+  </div>
+</section>
+
+<section class="section">
+  <a href="entity-database.html" class="btn primary">Return to Entity Database</a>
+  <a href="redacted-documents.html" class="btn">Redacted Documents</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Phantom Millz • Some Fragments Should Stay Lost</p>
+</footer>
+
+<script src="menu.js"></script>
+
+<script>
+async function loadFragment() {
+    const box = document.getElementById('fragment-box');
+
+    const params = new URLSearchParams(window.location.search);
+    const location = params.get('location');
+
+    if (!location) {
+        box.innerHTML = `
+            <div class="card">
+                <h3>⚠️ Fragment Error</h3>
+                <p>No archive location was provided.</p>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const response = await fetch('data/archive-fragments.json?cache=' + Date.now());
+
+        if (!response.ok) {
+            throw new Error('Could not load archive fragments.');
+        }
+
+        const codes = await response.json();
+
+        const matchingCodes = codes.filter(item =>
+            item.location &&
+            item.location.toLowerCase() === location.toLowerCase()
+        );
+
+        if (matchingCodes.length === 0) {
+            box.innerHTML = `
+                <div class="card">
+                    <h3>📁 ${location}</h3>
+                    <p>No active archive fragment detected for this location.</p>
+                    <p class="small">This file may have been removed by Containment Command.</p>
+                </div>
+            `;
+            return;
+        }
+
+        const selectedCode = matchingCodes[Math.floor(Math.random() * matchingCodes.length)];
+
+        box.innerHTML = `
+            <div class="card">
+                <h3>📁 ${location}</h3>
+                <p><strong>ARCHIVE CODE:</strong></p>
+                <h2>${selectedCode.code}</h2>
+                <p><strong>Reward:</strong> ${selectedCode.reward} Spoop Bucks</p>
+                <p class="small">
+                    Redeem this code live on stream using the Secret Archive Code channel point reward.
+                </p>
+            </div>
+        `;
+    }
+    catch (error) {
+        console.error(error);
+
+        box.innerHTML = `
+            <div class="card">
+                <h3>⚠️ Fragment Corrupted</h3>
+                <p>Unable to decode archive fragment.</p>
+            </div>
+        `;
+    }
+}
+
+loadFragment();
+</script>
+
+</body>
+</html>
