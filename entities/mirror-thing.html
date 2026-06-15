@@ -131,6 +131,14 @@
 </section>
 
 <section class="section">
+  <h2>📊 Archive Record</h2>
+
+  <div id="entity-live-record" class="cards">
+    Loading entity record...
+  </div>
+</section>
+  
+<section class="section">
   <h2>📜 Archive Connection</h2>
 
   <p>
@@ -149,5 +157,64 @@
   <p>© 2026 Phantom Millz • The Reflection Smiled First</p>
 </footer>
 <script src="../menu.js"></script>
+
+<script>
+const currentEntityName = "The Mirror Thing";
+
+async function loadEntityRecord() {
+    const container = document.getElementById('entity-live-record');
+
+    try {
+        const response = await fetch('../data/archive.json?cache=' + Date.now());
+        const data = await response.json();
+
+        const entities = data.entities || [];
+        const entity = entities.find(item => item.name === currentEntityName);
+
+        if (!entity) {
+            container.innerHTML = `
+                <div class="card">
+                    <h3>📊 No Record Found</h3>
+                    <p>This entity has not yet been recorded in the live archive.</p>
+                </div>
+            `;
+            return;
+        }
+
+        container.innerHTML = `
+            <div class="card">
+                <h3>👁️ Times Seen</h3>
+                <p><strong>${entity.timesSeen}</strong></p>
+            </div>
+
+            <div class="card">
+                <h3>✅ Times Defeated</h3>
+                <p><strong>${entity.timesDefeated}</strong></p>
+            </div>
+
+            <div class="card">
+                <h3>📌 Current Status</h3>
+                <p><strong>${entity.status}</strong></p>
+            </div>
+
+            <div class="card">
+                <h3>🕒 Last Seen</h3>
+                <p><strong>${entity.lastSeen}</strong></p>
+            </div>
+        `;
+    }
+    catch {
+        container.innerHTML = `
+            <div class="card">
+                <h3>⚠️ Archive Error</h3>
+                <p>Unable to access live archive data.</p>
+            </div>
+        `;
+    }
+}
+
+loadEntityRecord();
+</script>
+  
 </body>
 </html>
