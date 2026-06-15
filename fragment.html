@@ -81,7 +81,7 @@ async function loadFragment() {
     }
 
     try {
-        const response = await fetch('data/archive-fragments.json?cache=' + Date.now());
+        const response = await fetch('data/fragment-index.json?cache=' + Date.now());
 
         if (!response.ok) {
             throw new Error('Could not load archive fragments.');
