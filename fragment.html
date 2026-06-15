@@ -191,13 +191,23 @@ loadFragment();
 </script>
 <script>
 
-const fakeViews =
-    Math.floor(Math.random() * 80) + 10;
+const stats = [
+    "Previous Unauthorized Access Attempts",
+    "Known Survivors Of File Exposure",
+    "Archive Integrity Violations Recorded",
+    "Containment Breaches Linked To This File",
+    "Researchers Assigned To This Investigation",
+    "Command Review Requests"
+];
+
+const stat =
+    stats[Math.floor(Math.random() * stats.length)];
+
+const value =
+    Math.floor(Math.random() * 997) + 3;
 
 document.getElementById("access-counter")
-.innerHTML =
-    "Archive Access Count: " +
-    fakeViews;
+.innerHTML = `${stat}: ${value}`;
 
 </script>
 </body>
