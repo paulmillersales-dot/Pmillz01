@@ -58,6 +58,38 @@ h1, h2, h3, h4, h5, h6 {
 #database-stats .card {
     width: 300px;
 }
+
+#timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-item {
+    margin: 30px auto;
+    padding-left: 25px;
+    border-left: 2px solid crimson;
+}
+
+.timeline-date {
+    color: crimson;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(220, 20, 60, 0.5);
+}
+
+.timeline-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid crimson;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.25);
+}
+
+.timeline-card h3 {
+    color: crimson;
+}
+
 /* Phantom Forge */
 
 .containment-list {
