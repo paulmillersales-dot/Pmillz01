@@ -80,6 +80,61 @@ async function loadFragment() {
         return;
     }
 
+    box.innerHTML = `
+        <div class="card">
+            <h3>⚠ ACCESSING SEALED FRAGMENT ⚠</h3>
+            <p>
+                This file has been marked for removal by Containment Command.
+            </p>
+            <p>
+                Location Reference: <strong>${location}</strong>
+            </p>
+            <p style="color:crimson;">
+                Proceeding may expose restricted archive data.
+            </p>
+
+            <button class="btn primary" onclick="decryptFragment('${location}')">
+                PROCEED
+            </button>
+        </div>
+    `;
+}
+
+async function decryptFragment(location) {
+    const box = document.getElementById('fragment-box');
+
+    const messages = [
+        'RECOVERING ARCHIVE FRAGMENT...',
+        'VERIFYING FILE INTEGRITY...',
+        'REMOVING COMMAND REDACTIONS...',
+        'CHECKING CLEARANCE STATUS...',
+        'ACCESS GRANTED'
+    ];
+
+    let index = 0;
+
+    box.innerHTML = `
+        <div class="card">
+            <h3 id="decrypt-message">RECOVERING ARCHIVE FRAGMENT...</h3>
+            <p class="small">Do not refresh this page.</p>
+        </div>
+    `;
+
+    const interval = setInterval(() => {
+        index++;
+
+        if (index < messages.length) {
+            document.getElementById('decrypt-message').innerText = messages[index];
+        } else {
+            clearInterval(interval);
+            revealFragment(location);
+        }
+    }, 900);
+}
+
+async function revealFragment(location) {
+    const box = document.getElementById('fragment-box');
+
     try {
         const response = await fetch('data/fragment-index.json?cache=' + Date.now());
 
@@ -109,7 +164,8 @@ async function loadFragment() {
 
         box.innerHTML = `
             <div class="card">
-                <h3>📁 ${location}</h3>
+                <h3>🔓 ACCESS FRAGMENT RECOVERED</h3>
+                <p><strong>LOCATION:</strong> ${location}</p>
                 <p><strong>ARCHIVE CODE:</strong></p>
                 <h2>${selectedCode.code}</h2>
                 <p><strong>Reward:</strong> ${selectedCode.reward} Spoop Bucks</p>
