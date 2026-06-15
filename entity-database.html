@@ -89,6 +89,14 @@
   </div>
 </section>
 
+<section class="section dark-box">
+  <h2>🔴 Current Threat Assessment</h2>
+
+  <div id="threat-assessment" class="cards">
+    Calculating current threat level...
+  </div>
+</section>
+  
 <section class="section">
   <h2>📊 Database Status</h2>
   <div id="database-stats" class="cards">
@@ -131,6 +139,60 @@ async function loadDatabaseStats() {
 
     const incidents = data.incidents || [];
     const entities = data.entities || [];
+
+    let mostActiveEntity = null;
+
+entities.forEach(entity => {
+  if (
+    !mostActiveEntity ||
+    Number(entity.timesSeen) > Number(mostActiveEntity.timesSeen)
+  ) {
+    mostActiveEntity = entity;
+  }
+});
+
+const containmentSuccessRate = incidents.length > 0
+  ? Math.round(
+      incidents.filter(incident =>
+        incident.outcome === 'Contained' || incident.outcome === 'Defeated'
+      ).length / incidents.length * 100
+    )
+  : 0;
+
+const threatContainer = document.getElementById('threat-assessment');
+
+if (threatContainer) {
+  if (!mostActiveEntity) {
+    threatContainer.innerHTML = `
+      <div class="card">
+        <h3>👁️ No Active Threats</h3>
+        <p>No entity records available.</p>
+      </div>
+    `;
+  } else {
+    threatContainer.innerHTML = `
+      <div class="card">
+        <h3>👁️ Most Active Entity</h3>
+        <p><strong>${mostActiveEntity.name}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>⚠️ Times Seen</h3>
+        <p><strong>${mostActiveEntity.timesSeen}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>✅ Times Defeated</h3>
+        <p><strong>${mostActiveEntity.timesDefeated}</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Containment Success</h3>
+        <p><strong>${containmentSuccessRate}%</strong></p>
+      </div>
+    `;
+  }
+}
 
     const totalContainments = incidents.filter(incident =>
       incident.outcome === 'Contained' || incident.outcome === 'Defeated'
