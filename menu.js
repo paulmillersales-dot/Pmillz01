@@ -19,6 +19,7 @@ function loadMenu() {
     <a href="${prefix}entity-hunt.html">🔍 Entity Hunt</a>
     <a href="${prefix}hall-of-fame.html">🏆 Hall of Fame</a>
     <a href="${prefix}containment-command.html">🛡️ Containment Command</a>
+    <a href="${prefix}redacted-documents.html">📁 Redacted Documents</a>
     <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
   `;
 }
