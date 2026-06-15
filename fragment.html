@@ -41,7 +41,7 @@
     If valid, this code may be redeemed live on stream using the Secret Archive Code reward.
   </p>
 </section>
-
+<p id="access-counter"></p>
 <section class="section dark-box">
   <h2>📁 Fragment Data</h2>
 
@@ -189,6 +189,16 @@ async function revealFragment(location) {
 
 loadFragment();
 </script>
+<script>
 
+const fakeViews =
+    Math.floor(Math.random() * 80) + 10;
+
+document.getElementById("access-counter")
+.innerHTML =
+    "Archive Access Count: " +
+    fakeViews;
+
+</script>
 </body>
 </html>
