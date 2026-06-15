@@ -98,6 +98,17 @@ h1, h2, h3, h4, h5, h6 {
     color: crimson;
 }
 
+#threat-assessment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#threat-assessment .card {
+    width: 300px;
+}
+
 /* Phantom Forge */
 
 .containment-list {
