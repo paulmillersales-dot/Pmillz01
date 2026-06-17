@@ -1,6 +1,14 @@
 {
     "incidents":  [
                       {
+                          "id":  3,
+                          "entity":  "The Broadcast",
+                          "date":  "2026-06-17 22:03:53",
+                          "outcome":  "Contained",
+                          "killer":  "PmillZ01",
+                          "details":  "The Broadcast was defeated by PmillZ01 during Boss Hunt."
+                      },
+                      {
                           "id":  2,
                           "entity":  "Test Entity",
                           "date":  "2026-06-13 17:08:30",
@@ -21,9 +29,9 @@
                      {
                          "name":  "The Broadcast",
                          "status":  "Contained",
-                         "timesSeen":  1,
-                         "timesDefeated":  1,
-                         "lastSeen":  "2026-06-13 07:34:29"
+                         "timesSeen":  2,
+                         "timesDefeated":  2,
+                         "lastSeen":  "2026-06-17 22:03:53"
                      },
                      {
                          "name":  "Test Entity",
@@ -36,19 +44,19 @@
     "hallOfFame":  {
                        "topHunter":  {
                                          "name":  "PmillZ01",
-                                         "value":  999
+                                         "value":  1
                                      },
                        "mostCorrupted":  {
-                                             "name":  "Jeff",
-                                             "value":  666
+                                             "name":  "PmillZ01",
+                                             "value":  98
                                          },
                        "topHealer":  {
-                                         "name":  "Bob",
-                                         "value":  123
+                                         "name":  "PinkyBear_121",
+                                         "value":  2
                                      },
                        "mostRemembered":  {
-                                              "name":  "Steve",
-                                              "value":  321
+                                              "name":  "PmillZ01",
+                                              "value":  1
                                           }
                    }
 }
