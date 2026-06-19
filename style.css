@@ -120,6 +120,27 @@ h1, h2, h3, h4, h5, h6 {
     color: crimson;
 }
 
+.authority-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.authority-card {
+    width: 260px;
+    text-align: center;
+}
+
+.authority-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid crimson;
+    box-shadow: 0 0 18px rgba(220, 20, 60, 0.7);
+    margin-bottom: 12px;
+}
 /* Phantom Forge */
 
 .containment-list {
