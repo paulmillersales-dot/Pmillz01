@@ -14,6 +14,7 @@ function loadMenu() {
     <a href="${prefix}phantom-forge.html">⚒️ Phantom Forge</a>
     <a href="${prefix}entity-database.html">🗂️ Entity Database</a>
     <a href="${prefix}entity-archive.html">📜 Entity Archive</a>
+    <a href="${prefix}authority-structure.html">🏛️ Authority Structure</a>
     <a href="${prefix}incident-timeline.html">📅 Incident Timeline</a>
     <a href="${prefix}research-division.html">🧪 Research Division</a>
     <a href="${prefix}entity-hunt.html">🔍 Entity Hunt</a>
