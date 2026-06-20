@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Millz | Employee Recognition</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .winner-card img,
+    .winner-history img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid crimson;
+      box-shadow: 0 0 18px rgba(220, 20, 60, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .winner-card {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .winner-history {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<input type="checkbox" id="menu-check">
+
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
+
+<label for="menu-check" class="menu-overlay"></label>
+<aside class="side-menu" id="site-menu"></aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">PHANTOM REALM AUTHORITY</p>
+    <h1>EMPLOYEE RECOGNITION</h1>
+    <p class="tagline">Monthly Awards • Questionable Merit • Official Praise</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <h2>🏅 Employee of the Month</h2>
+  <p>
+    Each month, the Phantom Realm Authority recognises one outstanding employee
+    for their service, survival, paperwork, or suspicious influence.
+  </p>
+  <p>
+    Award results are generated automatically by the Department of Anomalous Quacktivity.
+  </p>
+</section>
+
+<section class="section dark-box">
+  <h2>🥇 Current Winner</h2>
+
+  <div class="card winner-card">
+    <img id="winner-image" src="" alt="Employee of the Month">
+
+    <h3 id="winner-name">Loading...</h3>
+
+    <p><strong>Position:</strong> <span id="winner-position"></span></p>
+    <p><strong>Department:</strong> <span id="winner-department"></span></p>
+    <p><strong>Award Month:</strong> <span id="winner-month"></span></p>
+    <p><strong>Commendations:</strong> <span id="winner-commendations"></span></p>
+    <p><strong>Disciplinary Actions:</strong> <span id="winner-disciplinary"></span></p>
+
+    <p><strong>Official Citation:</strong></p>
+    <p id="winner-citation"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>📜 Previous Winners Archive</h2>
+
+  <div class="cards" id="previous-winners">
+    Loading previous winners...
+  </div>
+</section>
+
+<section class="section dark-box">
+  <h2>⚠️ Recognition Notice</h2>
+
+  <p>
+    Employee of the Month awards are final unless overturned by Moo Moo.
+  </p>
+
+  <p>
+    Bribes are prohibited unless submitted in treat form.
+  </p>
+
+  <p>
+    The Department of Anomalous Quacktivity denies manipulating the results.
+  </p>
+</section>
+
+<section class="section">
+  <h2>📁 Related Documents</h2>
+
+  <a href="personnel-directory.html" class="btn primary">Personnel</a>
+  <a href="employee-handbook.html" class="btn">Handbook</a>
+  <a href="annual-report.html" class="btn">Report</a>
+  <a href="department-of-anomalous-quacktivity.html" class="btn">Quacktivity</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Phantom Realm Authority • Recognition May Be Politically Motivated</p>
+</footer>
+
+<script src="menu.js"></script>
+
+<script>
+const employees = [
+  {
+    name: "🐶 Moo Moo",
+    image: "images/moomoo.jpg",
+    position: "Supreme Director",
+    department: "Executive Command",
+    commendations: "Unlimited",
+    disciplinary: "0",
+    citations: [
+      "Outstanding morale support and continued excellence in suspicious sniffing.",
+      "Approved several operations through treat-based executive authority.",
+      "Maintained organisational stability by being a good girl.",
+      "Demonstrated exceptional leadership while asleep."
+    ]
+  },
+  {
+    name: "🦆 Infernal Duck",
+    image: "images/infernal-duck.jpg",
+    position: "Vice Director",
+    department: "Department of Anomalous Quacktivity",
+    commendations: "1",
+    disciplinary: "17",
+    citations: [
+      "Successfully expanded departmental influence without approval.",
+      "Submitted 47 pages of aggressive quacking and secured additional funding.",
+      "Established three oversight committees before breakfast.",
+      "Demonstrated alarming commitment to bureaucracy."
+    ]
+  },
+  {
+    name: "🤡 Joker Duck",
+    image: "images/joker-duck.jpg",
+    position: "Director of Containment Operations",
+    department: "Containment Command",
+    commendations: "2",
+    disciplinary: "9",
+    citations: [
+      "Maintained containment operations while making everyone deeply uncomfortable.",
+      "Asked one philosophical question and caused a six-hour meeting.",
+      "Improved morale through chaos. HR disagrees.",
+      "Converted a containment breach into a team-building exercise."
+    ]
+  },
+  {
+    name: "🧟 Frankenstein Duck",
+    image: "images/frankenstein-duck.jpg",
+    position: "Chief Research Officer",
+    department: "Research Division",
+    commendations: "4",
+    disciplinary: "12",
+    citations: [
+      "Achieved major research progress through methods no longer permitted.",
+      "Created only one new anomaly this month.",
+      "Completed a risk assessment after the incident, which still counts.",
+      "Reanimated departmental productivity."
+    ]
+  },
+  {
+    name: "🦖 T-Rex Duck",
+    image: "images/trex-duck.jpg",
+    position: "Director of Security",
+    department: "Security Division",
+    commendations: "8",
+    disciplinary: "3",
+    citations: [
+      "Prevented several breaches through sheer confidence.",
+      "Successfully intimidated a filing cabinet into compliance.",
+      "Maintained facility security despite arm-related limitations.",
+      "Did not operate heavy machinery this month."
+    ]
+  },
+  {
+    name: "🔪 Chuckie Duckie",
+    image: "images/chuckie-duckie.jpg",
+    position: "Director of Internal Affairs",
+    department: "Internal Affairs",
+    commendations: "Self-Issued",
+    disciplinary: "Classified",
+    citations: [
+      "Investigated Chuckie Duckie and found no wrongdoing.",
+      "Resolved all complaints by misplacing them.",
+      "Demonstrated strong commitment to internal affairs, especially his own.",
+      "Closed three investigations before they were opened."
+    ]
+  },
+  {
+    name: "⚡ Yuji Duck",
+    image: "images/yuji-duck.jpg",
+    position: "Field Operations Commander",
+    department: "Field Operations",
+    commendations: "11",
+    disciplinary: "4",
+    citations: [
+      "Entered active anomaly zones with terrifying enthusiasm.",
+      "Solved a field problem by punching it.",
+      "Returned from containment with most documentation intact.",
+      "Displayed excellent combat readiness and poor paperwork discipline."
+    ]
+  }
+];
+
+function getMonthName(date) {
+  return date.toLocaleString("en-GB", {
+    month: "long",
+    year: "numeric"
+  });
+}
+
+function getWinnerForDate(date) {
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  const winnerIndex = (month + year) % employees.length;
+  const citationIndex = (month + year * 2) % employees[winnerIndex].citations.length;
+
+  return {
+    employee: employees[winnerIndex],
+    citation: employees[winnerIndex].citations[citationIndex],
+    monthName: getMonthName(date)
+  };
+}
+
+function loadCurrentWinner() {
+  const now = new Date();
+  const result = getWinnerForDate(now);
+  const employee = result.employee;
+
+  document.getElementById("winner-image").src = employee.image;
+  document.getElementById("winner-name").innerText = employee.name;
+  document.getElementById("winner-position").innerText = employee.position;
+  document.getElementById("winner-department").innerText = employee.department;
+  document.getElementById("winner-month").innerText = result.monthName;
+  document.getElementById("winner-commendations").innerText = employee.commendations;
+  document.getElementById("winner-disciplinary").innerText = employee.disciplinary;
+  document.getElementById("winner-citation").innerText = result.citation;
+}
+
+function loadPreviousWinners() {
+  const container = document.getElementById("previous-winners");
+  container.innerHTML = "";
+
+  const now = new Date();
+
+  for (let i = 1; i <= 6; i++) {
+    const pastDate = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const result = getWinnerForDate(pastDate);
+    const employee = result.employee;
+
+    const card = document.createElement("div");
+    card.className = "card winner-history";
+
+    card.innerHTML = `
+      <img src="${employee.image}" alt="${employee.name}">
+      <h3>${employee.name}</h3>
+      <p><strong>${result.monthName}</strong></p>
+      <p><strong>Position:</strong> ${employee.position}</p>
+      <p>${result.citation}</p>
+    `;
+
+    container.appendChild(card);
+  }
+}
+
+loadCurrentWinner();
+loadPreviousWinners();
+</script>
+
+</body>
+</html>
