@@ -32,7 +32,7 @@
 <body>
 
 <input type="checkbox" id="menu-check">
-
+const archiveMonths = 24;
 <header class="site-header">
   <div class="brand-text">PHANTOM MILLZ</div>
   <label for="menu-check" class="menu-toggle">☰</label>
@@ -269,7 +269,7 @@ function loadPreviousWinners() {
 
   const now = new Date();
 
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= archiveMonths; i++) {
     const pastDate = new Date(now.getFullYear(), now.getMonth() - i, 1);
     const result = getWinnerForDate(pastDate);
     const employee = result.employee;
