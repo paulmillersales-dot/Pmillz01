@@ -141,6 +141,28 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 18px rgba(220, 20, 60, 0.7);
     margin-bottom: 12px;
 }
+
+.menu-heading {
+    margin: 18px 0 8px;
+    padding: 0 18px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: crimson;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+.side-menu a {
+    font-size: 14px;
+    padding: 10px 18px;
+    line-height: 1.2;
+}
+
+.side-menu a.active {
+    border-left: 4px solid crimson;
+    background: rgba(220, 20, 60, 0.22);
+}
+
 /* Phantom Forge */
 
 .containment-list {
