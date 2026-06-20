@@ -23,7 +23,7 @@
 
 <header class="hero">
   <div class="hero-content">
-    <p class="eyebrow">DEPARTMENT OF ANOMALOUS QUACKTIVITY</p>
+    <p class="eyebrow">PHANTOM REALM STAFF RECORDS</p>
     <h1>PERSONNEL DIRECTORY</h1>
     <p class="tagline">Executive Staff • Department Heads • Questionable Appointments</p>
   </div>
@@ -33,12 +33,8 @@
 
 <section class="section">
   <h2>📁 Personnel Directory</h2>
-  <p>
-    The following individuals are recognised members of the Department of Anomalous Quacktivity.
-  </p>
-  <p>
-    Some appointments are under review. Some reviews were eaten.
-  </p>
+  <p>The following individuals are recognised members of the Phantom Realm Authority.</p>
+  <p>Select a member of staff to view their classified personnel file.</p>
 </section>
 
 <section class="section dark-box">
@@ -47,23 +43,19 @@
   <div class="authority-grid">
 
     <div class="card authority-card">
-      <img src="images/moomoo.png" alt="Moo Moo">
+      <img src="images/moomoo.jpg" alt="Moo Moo">
       <h3>🐶 Moo Moo</h3>
       <p><strong>Supreme Director</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-001</p>
-      <p><strong>Department:</strong> Executive Command</p>
-      <p><strong>Status:</strong> Active</p>
-      <p class="small">Final authority on treats, morale, and suspicious sniffing.</p>
+      <p>Final authority on treats, morale, and suspicious sniffing.</p>
+      <button class="btn primary" onclick="showRecord('moomoo')">View Personnel File</button>
     </div>
 
     <div class="card authority-card">
-      <img src="images/infernal-duck.png" alt="Infernal Duck">
+      <img src="images/infernal-duck.jpg" alt="Infernal Duck">
       <h3>🦆 Infernal Duck</h3>
       <p><strong>Vice Director</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-002</p>
-      <p><strong>Department:</strong> Department of Anomalous Quacktivity</p>
-      <p><strong>Status:</strong> Pending Procurement</p>
-      <p class="small">Responsible for paperwork, hauntings, and deeply concerning quacks.</p>
+      <p>Responsible for paperwork, hauntings, and deeply concerning quacks.</p>
+      <button class="btn primary" onclick="showRecord('infernal')">View Personnel File</button>
     </div>
 
   </div>
@@ -75,75 +67,72 @@
   <div class="authority-grid">
 
     <div class="card authority-card">
-      <img src="images/joker-duck.png" alt="Joker Duck">
+      <img src="images/joker-duck.jpg" alt="Joker Duck">
       <h3>🤡 Joker Duck</h3>
       <p><strong>Director of Containment Operations</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-003</p>
-      <p><strong>Status:</strong> Unstable but Employed</p>
-      <p class="small">Handles dangerous entities and somehow makes the situation worse.</p>
+      <p>Handles dangerous entities and somehow makes the situation worse.</p>
+      <button class="btn primary" onclick="showRecord('joker')">View Personnel File</button>
     </div>
 
     <div class="card authority-card">
-      <img src="images/frankenstein-duck.png" alt="Frankenstein Duck">
+      <img src="images/frankenstein-duck.jpg" alt="Frankenstein Duck">
       <h3>🧟 Frankenstein Duck</h3>
       <p><strong>Chief Research Officer</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-004</p>
-      <p><strong>Status:</strong> Reanimated</p>
-      <p class="small">Oversees experiments that probably should not have been approved.</p>
+      <p>Oversees experiments that probably should not have been approved.</p>
+      <button class="btn primary" onclick="showRecord('frankenstein')">View Personnel File</button>
     </div>
 
     <div class="card authority-card">
-      <img src="images/trex-duck.png" alt="T-Rex Duck">
+      <img src="images/trex-duck.jpg" alt="T-Rex Duck">
       <h3>🦖 T-Rex Duck</h3>
       <p><strong>Director of Security</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-005</p>
-      <p><strong>Status:</strong> Aggressively Confident</p>
-      <p class="small">Tiny arms. Big authority. Absolutely no patience for breaches.</p>
+      <p>Tiny arms. Big authority. No patience for breaches.</p>
+      <button class="btn primary" onclick="showRecord('trex')">View Personnel File</button>
     </div>
 
     <div class="card authority-card">
-      <img src="images/chuckie-duckie.png" alt="Chuckie Duckie">
+      <img src="images/chuckie-duckie.jpg" alt="Chuckie Duckie">
       <h3>🔪 Chuckie Duckie</h3>
       <p><strong>Director of Internal Affairs</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-006</p>
-      <p><strong>Status:</strong> Under Investigation</p>
-      <p class="small">Investigates corruption while remaining suspiciously corrupt.</p>
+      <p>Investigates corruption while remaining suspiciously corrupt.</p>
+      <button class="btn primary" onclick="showRecord('chuckie')">View Personnel File</button>
     </div>
 
     <div class="card authority-card">
-      <img src="images/yuji-duck.png" alt="Yuji Duck">
+      <img src="images/yuji-duck.jpg" alt="Yuji Duck">
       <h3>⚡ Yuji Duck</h3>
       <p><strong>Field Operations Commander</strong></p>
-      <p><strong>Employee ID:</strong> MEDU-007</p>
-      <p><strong>Status:</strong> Combat Ready</p>
-      <p class="small">Punches anomalies first. Reads the file later. Maybe.</p>
+      <p>Punches anomalies first. Reads the file later. Maybe.</p>
+      <button class="btn primary" onclick="showRecord('yuji')">View Personnel File</button>
     </div>
 
   </div>
 </section>
 
 <section class="section dark-box">
-  <h2>⚠️ Personnel Notice</h2>
+  <h2>📁 Classified Personnel File</h2>
 
-  <p>
-    Staff records are maintained by the Department of Anomalous Quacktivity.
-  </p>
+  <div id="personnel-file" class="personnel-file">
+    <h3 id="record-name">No Personnel Record Selected</h3>
 
-  <p>
-    Any missing, altered, or suspiciously damp files should be reported to Containment Command.
-  </p>
+    <p><strong>Employee ID:</strong> <span id="record-id">---</span></p>
+    <p><strong>Position:</strong> <span id="record-position">---</span></p>
+    <p><strong>Department:</strong> <span id="record-department">---</span></p>
+    <p><strong>Status:</strong> <span id="record-status">---</span></p>
+    <p><strong>Disciplinary Actions:</strong> <span id="record-disciplinary">---</span></p>
+    <p><strong>Commendations:</strong> <span id="record-commendations">---</span></p>
 
-  <p>
-    Complaints regarding leadership may be submitted in writing and ignored in the order received.
-  </p>
+    <p><strong>Notes:</strong></p>
+    <p id="record-notes">Select a personnel record to begin.</p>
+  </div>
 </section>
 
 <section class="section">
   <h2>📁 Connected Records</h2>
 
-  <a href="authority-structure.html" class="btn primary">Authority Structure</a>
-  <a href="containment-command.html" class="btn">Containment Command</a>
-  <a href="research-division.html" class="btn">Research Division</a>
+  <a href="authority-structure.html" class="btn primary">Authority</a>
+  <a href="employee-handbook.html" class="btn">Handbook</a>
+  <a href="containment-command.html" class="btn">Command</a>
 </section>
 
 </main>
@@ -153,6 +142,133 @@
 </footer>
 
 <script src="menu.js"></script>
+
+<script>
+const records = {
+  moomoo: {
+    name: "🐶 Moo Moo",
+    id: "MEDU-001",
+    position: "Supreme Director",
+    department: "Executive Command",
+    status: "Active",
+    disciplinary: "0",
+    commendations: "Unlimited",
+    notes: "Highest authority within the Phantom Realm Authority. Appeals may be submitted through approved channels. Approved channels currently consist primarily of treats."
+  },
+
+  infernal: {
+    name: "🦆 Infernal Duck",
+    id: "MEDU-002",
+    position: "Vice Director",
+    department: "Department of Anomalous Quacktivity",
+    status: "Pending Procurement",
+    disciplinary: "17",
+    commendations: "0",
+    notes: "Continues to establish unauthorised departments despite repeated warnings. Several files linked to this employee have developed bite marks."
+  },
+
+  joker: {
+    name: "🤡 Joker Duck",
+    id: "MEDU-003",
+    position: "Director of Containment Operations",
+    department: "Containment Command",
+    status: "Unstable but Employed",
+    disciplinary: "9",
+    commendations: "2",
+    notes: "Responsible for several successful containments and significantly more paperwork. Morale impact considered unpredictable."
+  },
+
+  frankenstein: {
+    name: "🧟 Frankenstein Duck",
+    id: "MEDU-004",
+    position: "Chief Research Officer",
+    department: "Research Division",
+    status: "Reanimated",
+    disciplinary: "12",
+    commendations: "4",
+    notes: "No longer authorised to approve his own experiments. This regulation exists due to repeated incidents."
+  },
+
+  trex: {
+    name: "🦖 T-Rex Duck",
+    id: "MEDU-005",
+    position: "Director of Security",
+    department: "Security Division",
+    status: "Aggressively Confident",
+    disciplinary: "3",
+    commendations: "8",
+    notes: "Facility security remains effective despite limited arm reach. Personnel are instructed not to ask about Regulation 5.4."
+  },
+
+  chuckie: {
+    name: "🔪 Chuckie Duckie",
+    id: "MEDU-006",
+    position: "Director of Internal Affairs",
+    department: "Internal Affairs",
+    status: "Under Investigation",
+    disciplinary: "Classified",
+    commendations: "Self-Issued",
+    notes: "Investigating Officer: Chuckie Duckie. Investigation result: Chuckie Duckie found no wrongdoing. This finding is under review."
+  },
+
+  yuji: {
+    name: "⚡ Yuji Duck",
+    id: "MEDU-007",
+    position: "Field Operations Commander",
+    department: "Field Operations",
+    status: "Combat Ready",
+    disciplinary: "4",
+    commendations: "11",
+    notes: "Frequently enters active anomaly zones before reading mission briefings. Surprisingly effective. Deeply stressful for administration."
+  }
+};
+
+function showRecord(recordId) {
+  const record = records[recordId];
+
+  if (!record) return;
+
+  document.getElementById("record-name").innerText = record.name;
+  document.getElementById("record-id").innerText = record.id;
+  document.getElementById("record-position").innerText = record.position;
+  document.getElementById("record-department").innerText = record.department;
+  document.getElementById("record-status").innerText = record.status;
+  document.getElementById("record-disciplinary").innerText = record.disciplinary;
+  document.getElementById("record-commendations").innerText = record.commendations;
+  document.getElementById("record-notes").innerText = record.notes;
+
+  const file = document.getElementById("personnel-file");
+  file.classList.add("open");
+
+  file.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+}
+</script>
+
+<style>
+.personnel-file {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    padding 0.4s ease;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid crimson;
+  border-radius: 12px;
+  margin-top: 25px;
+  padding: 0 20px;
+}
+
+.personnel-file.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
+}
+</style>
 
 </body>
 </html>
