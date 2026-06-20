@@ -28,6 +28,7 @@ function loadMenu() {
   <a href="${prefix}authority-structure.html">🏛️ Authority</a>
   <a href="${prefix}personnel-directory.html">📁 Personnel</a>
   <a href="${prefix}annual-report.html">📊 Report</a>
+  <a href="${prefix}incident-reports.html">📄 Incidents</a>
 
   <div class="menu-heading">EXTERNAL</div>
   <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
