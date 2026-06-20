@@ -30,6 +30,7 @@ function loadMenu() {
   <a href="${prefix}personnel-directory.html">📁 Personnel</a>
   <a href="${prefix}annual-report.html">📊 Report</a>
   <a href="${prefix}incident-reports.html">📄 Incidents</a>
+  <a href="${prefix}employee-recognition.html">🏅 Awards</a>
 
   <div class="menu-heading">EXTERNAL</div>
   <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
