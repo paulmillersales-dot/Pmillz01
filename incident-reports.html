@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Millz | Incident Reports</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .incident-card {
+      cursor: pointer;
+    }
+
+    .incident-file {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.7s ease, opacity 0.5s ease, padding 0.4s ease;
+      margin-top: 15px;
+      padding: 0 18px;
+      border: 1px solid crimson;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .incident-file.open {
+      max-height: 900px;
+      opacity: 1;
+      padding: 18px;
+    }
+
+    .redacted {
+      background: black;
+      color: black;
+      padding: 0 6px;
+      border-radius: 3px;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<input type="checkbox" id="menu-check">
+
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
+
+<label for="menu-check" class="menu-overlay"></label>
+<aside class="side-menu" id="site-menu"></aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">PHANTOM REALM AUTHORITY</p>
+    <h1>INCIDENT REPORTS</h1>
+    <p class="tagline">Filed Reports • Redacted Evidence • Administrative Catastrophes</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <h2>📄 Incident Reports Archive</h2>
+  <p>
+    Select an incident report to access the partially declassified file.
+  </p>
+  <p>
+    Some records have been redacted, corrupted, misplaced, or aggressively quacked over.
+  </p>
+</section>
+
+<section class="section dark-box">
+  <h2>📁 Released Files</h2>
+
+  <div class="cards">
+
+    <div class="card incident-card" onclick="toggleIncident('pr026')">
+      <h3>INCIDENT PR-026</h3>
+      <p><strong>Classification:</strong> Administrative Disaster</p>
+      <p><strong>Status:</strong> Contained</p>
+
+      <div id="pr026" class="incident-file">
+        <p><strong>Date:</strong> 14/02/2026</p>
+        <p><strong>Filed By:</strong> Archive Intelligence</p>
+        <p>
+          The Infernal Duck established the Emergency Emergency Response Committee without approval.
+        </p>
+        <p>
+          The committee immediately voted to create three additional committees to oversee the original committee.
+        </p>
+        <p>
+          By end of day, nine committees existed and no emergency response capability remained.
+        </p>
+        <p><strong>Resolution:</strong> All committees were sealed inside Filing Cabinet <span class="redacted">████</span>.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr041')">
+      <h3>INCIDENT PR-041</h3>
+      <p><strong>Classification:</strong> Security Failure</p>
+      <p><strong>Status:</strong> Ongoing</p>
+
+      <div id="pr041" class="incident-file">
+        <p><strong>Date:</strong> 03/03/2026</p>
+        <p><strong>Filed By:</strong> Security Division</p>
+        <p>
+          T-Rex Duck entered a restricted area after declaring himself Head of Security Security.
+        </p>
+        <p>
+          When challenged, T-Rex Duck produced a badge apparently drawn in crayon.
+        </p>
+        <p>
+          The badge was later discovered to be legitimate.
+        </p>
+        <p><strong>Resolution:</strong> Badge authority remains under <span class="redacted">████████</span> review.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr066')">
+      <h3>INCIDENT PR-066</h3>
+      <p><strong>Classification:</strong> Internal Affairs</p>
+      <p><strong>Status:</strong> Under Review</p>
+
+      <div id="pr066" class="incident-file">
+        <p><strong>Date:</strong> 27/03/2026</p>
+        <p><strong>Filed By:</strong> Internal Affairs</p>
+        <p>
+          Chuckie Duckie was assigned to investigate allegations against Chuckie Duckie.
+        </p>
+        <p>
+          After seven minutes, Chuckie Duckie concluded Chuckie Duckie had committed no wrongdoing.
+        </p>
+        <p>
+          The investigation was reviewed by Chuckie Duckie and approved by Chuckie Duckie.
+        </p>
+        <p><strong>Resolution:</strong> Investigation reopened by <span class="redacted">██████████</span>.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr089')">
+      <h3>INCIDENT PR-089</h3>
+      <p><strong>Classification:</strong> Executive Override</p>
+      <p><strong>Status:</strong> Approved</p>
+
+      <div id="pr089" class="incident-file">
+        <p><strong>Date:</strong> 11/04/2026</p>
+        <p><strong>Filed By:</strong> Executive Command</p>
+        <p>
+          Supreme Director Moo Moo approved three unrelated operations after receiving treats.
+        </p>
+        <p>
+          One operation involved containment. One involved belly rubs.
+        </p>
+        <p>
+          The third remains classified.
+        </p>
+        <p><strong>Resolution:</strong> Treat-based approvals remain valid under Regulation 7.4.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr117')">
+      <h3>INCIDENT PR-117</h3>
+      <p><strong>Classification:</strong> Reality Instability</p>
+      <p><strong>Status:</strong> Beneficial</p>
+
+      <div id="pr117" class="incident-file">
+        <p><strong>Date:</strong> 28/04/2026</p>
+        <p><strong>Filed By:</strong> Research Division</p>
+        <p>
+          Research Division accidentally created a second break room.
+        </p>
+        <p>
+          Personnel entering the second break room exited five minutes before entering.
+        </p>
+        <p>
+          Productivity increased by 37%.
+        </p>
+        <p><strong>Resolution:</strong> Anomaly retained for operational purposes.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr142')">
+      <h3>INCIDENT PR-142</h3>
+      <p><strong>Classification:</strong> Severe Quacktivity Event</p>
+      <p><strong>Status:</strong> Inexplicably Successful</p>
+
+      <div id="pr142" class="incident-file">
+        <p><strong>Date:</strong> 17/05/2026</p>
+        <p><strong>Filed By:</strong> Department of Anomalous Quacktivity</p>
+        <p>
+          The Department submitted a budget request containing no numbers, no explanations, and no budget proposal.
+        </p>
+        <p>
+          It did contain 47 pages of increasingly aggressive quacking.
+        </p>
+        <p>
+          Funding was approved.
+        </p>
+        <p><strong>Resolution:</strong> Treasury refuses to discuss this incident.</p>
+      </div>
+    </div>
+
+    <div class="card incident-card" onclick="toggleIncident('pr201')">
+      <h3>INCIDENT PR-201</h3>
+      <p><strong>Classification:</strong> Existential Hazard</p>
+      <p><strong>Status:</strong> Philosophically Concerning</p>
+
+      <div id="pr201" class="incident-file">
+        <p><strong>Date:</strong> 01/06/2026</p>
+        <p><strong>Filed By:</strong> Containment Command</p>
+        <p>
+          Joker Duck asked: “What if the containment breach is actually containing us?”
+        </p>
+        <p>
+          Staff debated the question for six hours.
+        </p>
+        <p>
+          During this period, an actual containment breach occurred.
+        </p>
+        <p>
+          Nobody noticed.
+        </p>
+        <p><strong>Resolution:</strong> Philosophy banned from active containment zones.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section dark-box">
+  <h2>⚠ Archive Notice</h2>
+  <p>
+    Further incident reports remain sealed pending review by Moo Moo, the Department of Anomalous Quacktivity,
+    and at least one duck who refuses to provide identification.
+  </p>
+</section>
+
+<section class="section">
+  <h2>📁 Related Documents</h2>
+  <a href="annual-report.html" class="btn primary">Annual Report</a>
+  <a href="employee-handbook.html" class="btn">Handbook</a>
+  <a href="personnel-directory.html" class="btn">Personnel</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Phantom Realm Authority • Incident Reports May Bite</p>
+</footer>
+
+<script src="menu.js"></script>
+
+<script>
+function toggleIncident(id) {
+  const file = document.getElementById(id);
+
+  if (!file) return;
+
+  file.classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
