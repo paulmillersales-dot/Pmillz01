@@ -25,6 +25,7 @@ function loadMenu() {
   <a href="${prefix}hall-of-fame.html">🏆 Records</a>
 
   <div class="menu-heading">MEDU</div>
+  <a href="${prefix}department-of-anomalous-quacktivity.html">🦆 Quacktivity</a>
   <a href="${prefix}authority-structure.html">🏛️ Authority</a>
   <a href="${prefix}personnel-directory.html">📁 Personnel</a>
   <a href="${prefix}annual-report.html">📊 Report</a>
