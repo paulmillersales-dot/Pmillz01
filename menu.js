@@ -20,7 +20,7 @@ function loadMenu() {
   <a href="${prefix}incident-timeline.html">📰 Timeline</a>
   <a href="${prefix}research-division.html">🧪 Research</a>
   <a href="${prefix}containment-command.html">🛡️ Containment</a>
-  <a href="${prefix}redacted-documents.html">📁 RDocuments</a>
+  <a href="${prefix}redacted-documents.html">📁 Documents</a>
   <a href="${prefix}entity-hunt.html">🔦 Hunt</a>
   <a href="${prefix}hall-of-fame.html">🏆 Records</a>
 
