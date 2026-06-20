@@ -12,21 +12,21 @@ function loadMenu() {
   <a href="${prefix}community.html">👻 Community</a>
   <a href="${prefix}content.html">🎥 Content</a>
   <a href="${prefix}contact.html">📞 Contact</a>
-  <a href="${prefix}phantom-forge.html">🛠️ Phantom Forge</a>
+  <a href="${prefix}phantom-forge.html">🛠️ Forge</a>
 
   <div class="menu-heading">PHANTOM REALM</div>
-  <a href="${prefix}entity-database.html">📁 Entity Database</a>
-  <a href="${prefix}entity-archive.html">📜 Entity Archive</a>
-  <a href="${prefix}incident-timeline.html">📰 Incident Timeline</a>
-  <a href="${prefix}research-division.html">🧪 Research Division</a>
-  <a href="${prefix}containment-command.html">🛡️ Containment Command</a>
-  <a href="${prefix}redacted-documents.html">📁 Redacted Documents</a>
-  <a href="${prefix}entity-hunt.html">🔦 Entity Hunt</a>
-  <a href="${prefix}hall-of-fame.html">🏆 Hall of Fame</a>
+  <a href="${prefix}entity-database.html">📁 Database</a>
+  <a href="${prefix}entity-archive.html">📜 Archive</a>
+  <a href="${prefix}incident-timeline.html">📰 Timeline</a>
+  <a href="${prefix}research-division.html">🧪 Research</a>
+  <a href="${prefix}containment-command.html">🛡️ Containment</a>
+  <a href="${prefix}redacted-documents.html">📁 RDocuments</a>
+  <a href="${prefix}entity-hunt.html">🔦 Hunt</a>
+  <a href="${prefix}hall-of-fame.html">🏆 Records</a>
 
   <div class="menu-heading">MEDU</div>
-  <a href="${prefix}authority-structure.html">🏛️ Authority Structure</a>
-  <a href="${prefix}personnel-directory.html">📁 Personnel Directory</a>
+  <a href="${prefix}authority-structure.html">🏛️ Authority</a>
+  <a href="${prefix}personnel-directory.html">📁 Personnel</a>
 
   <div class="menu-heading">EXTERNAL</div>
   <a href="https://www.twitch.tv/pmillz01">🎮 Twitch</a>
