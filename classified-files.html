@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +10,14 @@
   <style>
     .classified-file {
       scroll-margin-top: 120px;
+    }
+
+    body:not(.access-granted) .locked-file {
+      display: none !important;
+    }
+
+    body.access-granted .locked-file {
+      display: block !important;
     }
 
     .glitch-redacted {
@@ -71,16 +80,9 @@
         background: black;
         color: black;
       }
-
-      .locked-file {
-        display: none;
-      }
-
-      .access-granted .locked-file {
-          display: block;
-      }
     }
   </style>
+
 </head>
 
 <body>
@@ -93,6 +95,7 @@
 </header>
 
 <label for="menu-check" class="menu-overlay"></label>
+
 <aside class="side-menu" id="site-menu"></aside>
 
 <div class="fog fog1"></div>
@@ -126,45 +129,47 @@
 
   <div class="cards">
 
-    <div class="card">
-      <h3>FILE-001</h3>
-      <p><strong>Subject:</strong> <span class="glitch-redacted leak-fast">THE BROADCAST</span></p>
-      <p><strong>Classification:</strong> HIGH</p>
-      <p><strong>Status:</strong> CONTAINED</p>
-      <a href="classified-access.html?file=broadcast" class="btn primary">Request Access</a>
-    </div>
+```
+<div class="card">
+  <h3>FILE-001</h3>
+  <p><strong>Subject:</strong> <span class="glitch-redacted leak-fast">THE BROADCAST</span></p>
+  <p><strong>Classification:</strong> HIGH</p>
+  <p><strong>Status:</strong> CONTAINED</p>
+  <a href="classified-access.html?file=broadcast" class="btn primary">Request Access</a>
+</div>
 
-    <div class="card">
-      <h3>FILE-002</h3>
-      <p><strong>Subject:</strong> <span class="glitch-redacted leak-medium">THE MIRROR THING</span></p>
-      <p><strong>Classification:</strong> SEVERE</p>
-      <p><strong>Status:</strong> OBSERVED</p>
-      <a href="classified-access.html?file=mirror" class="btn primary">Request Access</a>
-    </div>
+<div class="card">
+  <h3>FILE-002</h3>
+  <p><strong>Subject:</strong> <span class="glitch-redacted leak-medium">THE MIRROR THING</span></p>
+  <p><strong>Classification:</strong> SEVERE</p>
+  <p><strong>Status:</strong> OBSERVED</p>
+  <a href="classified-access.html?file=mirror" class="btn primary">Request Access</a>
+</div>
 
-    <div class="card">
-      <h3>FILE-003</h3>
-      <p><strong>Subject:</strong> <span class="glitch-redacted leak-medium">THE SHADOW ENTITY</span></p>
-      <p><strong>Classification:</strong> CRITICAL</p>
-      <p><strong>Status:</strong> WATCHING</p>
-      <a href="classified-access.html?file=shadow" class="btn primary">Request Access</a>
-    </div>
+<div class="card">
+  <h3>FILE-003</h3>
+  <p><strong>Subject:</strong> <span class="glitch-redacted leak-medium">THE SHADOW ENTITY</span></p>
+  <p><strong>Classification:</strong> CRITICAL</p>
+  <p><strong>Status:</strong> WATCHING</p>
+  <a href="classified-access.html?file=shadow" class="btn primary">Request Access</a>
+</div>
 
-    <div class="card">
-      <h3>FILE-004</h3>
-      <p><strong>Subject:</strong> <span class="glitch-redacted leak-fast">INFERNAL DUCK</span></p>
-      <p><strong>Classification:</strong> ADMINISTRATIVE</p>
-      <p><strong>Status:</strong> UNCONTAINED</p>
-      <a href="classified-access.html?file=infernal-duck" class="btn primary">Request Access</a>
-    </div>
+<div class="card">
+  <h3>FILE-004</h3>
+  <p><strong>Subject:</strong> <span class="glitch-redacted leak-fast">INFERNAL DUCK</span></p>
+  <p><strong>Classification:</strong> ADMINISTRATIVE</p>
+  <p><strong>Status:</strong> UNCONTAINED</p>
+  <a href="classified-access.html?file=infernal-duck" class="btn primary">Request Access</a>
+</div>
 
-    <div class="card">
-      <h3>FILE-005</h3>
-      <p><strong>Subject:</strong> <span class="glitch-redacted leak-rare">PROJECT MOO MOO</span></p>
-      <p><strong>Classification:</strong> TOP SECRET</p>
-      <p><strong>Status:</strong> ACTIVE</p>
-      <a href="classified-access.html?file=project-moomoo" class="btn primary">Request Access</a>
-    </div>
+<div class="card">
+  <h3>FILE-005</h3>
+  <p><strong>Subject:</strong> <span class="glitch-redacted leak-rare">PROJECT MOO MOO</span></p>
+  <p><strong>Classification:</strong> TOP SECRET</p>
+  <p><strong>Status:</strong> ACTIVE</p>
+  <a href="classified-access.html?file=project-moomoo" class="btn primary">Request Access</a>
+</div>
+```
 
   </div>
 </section>
@@ -210,7 +215,7 @@
   </p>
 </section>
 
-<section id="shadow" class="section dark-box classified-file">
+<section id="shadow" class="section dark-box classified-file locked-file">
   <h2>FILE-003 — THE SHADOW ENTITY</h2>
 
   <p><strong>Designation:</strong> THE SHADOW ENTITY</p>
@@ -230,7 +235,7 @@
   <p><strong>Purpose:</strong> Unknown.</p>
 </section>
 
-<section id="infernal-duck" class="section classified-file">
+<section id="infernal-duck" class="section classified-file locked-file">
   <h2>FILE-004 — INFERNAL DUCK</h2>
 
   <p><strong>Designation:</strong> INFERNAL DUCK</p>
@@ -252,7 +257,7 @@
   </p>
 </section>
 
-<section id="project-moomoo" class="section dark-box classified-file">
+<section id="project-moomoo" class="section dark-box classified-file locked-file">
   <h2>FILE-005 — PROJECT MOO MOO</h2>
 
   <p><strong>Designation:</strong> <span class="glitch-redacted leak-rare">PROJECT MOO MOO</span></p>
@@ -291,10 +296,8 @@
 <section class="section">
   <h2>📁 Related Documents</h2>
 
-  <a href="public-information-office.html" class="btn primary">Public Info</a>
-  <a href="incident-reports.html" class="btn">Incidents</a>
-  <a href="department-of-anomalous-quacktivity.html" class="btn">Quacktivity</a>
-  <a href="authority-structure.html" class="btn">Authority</a>
+<a href="public-information-office.html" class="btn primary">Public Info</a> <a href="incident-reports.html" class="btn">Incidents</a> <a href="department-of-anomalous-quacktivity.html" class="btn">Quacktivity</a> <a href="authority-structure.html" class="btn">Authority</a>
+
 </section>
 
 </main>
@@ -305,12 +308,11 @@
 
 <script src="menu.js"></script>
 
-  <script>
+<script>
 const params = new URLSearchParams(window.location.search);
-const access = params.get("access");
 
-if (access === "granted") {
-    document.body.classList.add("access-granted");
+if (params.get("access") === "granted") {
+  document.body.classList.add("access-granted");
 }
 </script>
 
