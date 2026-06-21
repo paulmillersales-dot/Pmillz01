@@ -12,12 +12,8 @@
       scroll-margin-top: 120px;
     }
 
-    body:not(.access-granted) .locked-file {
-      display: none !important;
-    }
-
-    body.access-granted .locked-file {
-      display: block !important;
+    .locked-file {
+      display: none;
     }
 
     .glitch-redacted {
@@ -330,7 +326,25 @@
 const params = new URLSearchParams(window.location.search);
 
 if (params.get("access") === "granted") {
-  document.body.classList.add("access-granted");
+
+    const targetFile = window.location.hash.substring(1);
+
+    document.querySelectorAll(".locked-file").forEach(file => {
+        file.style.display = "none";
+    });
+
+    const selected = document.getElementById(targetFile);
+
+    if (selected) {
+        selected.style.display = "block";
+
+        setTimeout(() => {
+            selected.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 100);
+    }
 }
 </script>
 
