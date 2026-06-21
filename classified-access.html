@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phantom Millz | Access Verification</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: crimson;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.access-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.access-box {
+    border: 2px solid crimson;
+    padding: 40px;
+    max-width: 720px;
+    width: 85%;
+    box-shadow: 0 0 35px crimson;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.access-title {
+    font-size: 42px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 14px crimson;
+    animation: glitchPulse 0.25s infinite;
+}
+
+.access-small {
+    margin-top: 20px;
+    color: white;
+    opacity: 0.85;
+    font-size: 18px;
+}
+
+.scan-line {
+    margin: 25px auto 0;
+    height: 4px;
+    width: 80%;
+    background: crimson;
+    box-shadow: 0 0 15px crimson;
+    animation: scanMove 1.2s infinite;
+}
+
+.granted {
+    color: #00ff88;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+@keyframes glitchPulse {
+    0% { transform: translate(0); opacity: 1; }
+    20% { transform: translate(1px, -1px); opacity: 0.8; }
+    40% { transform: translate(-1px, 1px); opacity: 1; }
+    60% { transform: translate(2px, 0); opacity: 0.7; }
+    80% { transform: translate(-2px, 1px); opacity: 1; }
+    100% { transform: translate(0); opacity: 1; }
+}
+
+@keyframes scanMove {
+    0% { transform: scaleX(0.2); opacity: 0.3; }
+    50% { transform: scaleX(1); opacity: 1; }
+    100% { transform: scaleX(0.2); opacity: 0.3; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="access-screen">
+    <div class="access-box">
+        <h1 id="access-title" class="access-title">ACCESS DENIED</h1>
+
+        <p id="access-message" class="access-small">
+            Clearance verification failed.
+        </p>
+
+        <div class="scan-line"></div>
+    </div>
+</div>
+
+<script>
+const files = {
+    "broadcast": "classified-files.html#broadcast",
+    "mirror": "classified-files.html#mirror",
+    "shadow": "classified-files.html#shadow",
+    "infernal-duck": "classified-files.html#infernal-duck",
+    "project-moomoo": "classified-files.html#project-moomoo"
+};
+
+const params = new URLSearchParams(window.location.search);
+const file = params.get("file");
+
+const target = files[file] || "classified-files.html";
+
+const title = document.getElementById("access-title");
+const message = document.getElementById("access-message");
+
+setTimeout(() => {
+    title.innerText = "ACCESS DENIED";
+    message.innerText = "User clearance insufficient.";
+}, 600);
+
+setTimeout(() => {
+    title.innerText = "ACCESS DENIED";
+    message.innerText = "Override request detected.";
+}, 1400);
+
+setTimeout(() => {
+    title.innerText = "ACCESS D̴E̷N̶I̴E̶D̷";
+    message.innerText = "System integrity compromised.";
+}, 2200);
+
+setTimeout(() => {
+    title.innerText = "ACCESS GRANTED";
+    title.classList.add("granted");
+    message.innerText = "Redirecting to classified file...";
+}, 3100);
+
+setTimeout(() => {
+    window.location.href = target;
+}, 4300);
+</script>
+
+</body>
+</html>
