@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Millz | Classified Files</title>
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    .classified-card {
+      border: 1px solid crimson;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .file-tag {
+      color: crimson;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .glitch-redacted {
+      background: black;
+      color: black;
+      padding: 0 6px;
+      border-radius: 3px;
+      display: inline-block;
+      animation: classifiedLeak 14s infinite;
+    }
+
+    .leak-fast {
+      animation-duration: 8s;
+    }
+
+    .leak-medium {
+      animation-duration: 15s;
+    }
+
+    .leak-rare {
+      animation-duration: 30s;
+    }
+
+    @keyframes classifiedLeak {
+      0%, 95%, 100% {
+        background: black;
+        color: black;
+        text-shadow: none;
+        transform: translateX(0);
+      }
+
+      96% {
+        background: black;
+        color: crimson;
+        text-shadow: 0 0 4px crimson;
+        transform: translateX(-1px);
+      }
+
+      96.5% {
+        background: transparent;
+        color: crimson;
+        text-shadow: 0 0 8px crimson;
+        transform: translateX(1px);
+      }
+
+      97% {
+        background: black;
+        color: black;
+        text-shadow: none;
+        transform: translateX(0);
+      }
+
+      98% {
+        background: transparent;
+        color: crimson;
+        text-shadow: 0 0 6px crimson;
+      }
+
+      99% {
+        background: black;
+        color: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<input type="checkbox" id="menu-check">
+
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
+
+<label for="menu-check" class="menu-overlay"></label>
+<aside class="side-menu" id="site-menu"></aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">PHANTOM REALM AUTHORITY</p>
+    <h1>CLASSIFIED FILES</h1>
+    <p class="tagline">Restricted Records • Data Leaks • Unauthorised Truths</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <h2>🔒 Classified Archive</h2>
+
+  <p>
+    The following files are restricted under Phantom Realm Authority security protocols.
+  </p>
+
+  <p>
+    Public Information Office guidance states that none of these records exist.
+  </p>
+
+  <p>
+    This database disagrees.
+  </p>
+</section>
+
+<section id="broadcast" class="section dark-box classified-card">
+  <p class="file-tag">FILE-001</p>
+  <h2>📺 The Broadcast</h2>
+
+  <p><strong>Designation:</strong> <span class="glitch-redacted leak-fast">THE BROADCAST</span></p>
+  <p><strong>Threat Level:</strong> <span class="glitch-redacted leak-medium">HIGH</span></p>
+  <p><strong>Status:</strong> ACTIVE</p>
+
+  <p><strong>Summary:</strong></p>
+  <p>
+    An anomalous transmission capable of entering live channels, archived footage,
+    and unattended screens. Subject appears to respond to attention, fear, and poorly timed confidence.
+  </p>
+
+  <p>
+    Public statement claiming broadcast events are "formatting issues" has been marked
+    <span class="glitch-redacted leak-rare">FALSE</span>.
+  </p>
+</section>
+
+<section id="mirror" class="section classified-card">
+  <p class="file-tag">FILE-002</p>
+  <h2>🪞 The Mirror Thing</h2>
+
+  <p><strong>Designation:</strong> <span class="glitch-redacted leak-fast">THE MIRROR THING</span></p>
+  <p><strong>Threat Level:</strong> <span class="glitch-redacted leak-medium">SEVERE</span></p>
+  <p><strong>Status:</strong> UNDER OBSERVATION</p>
+
+  <p><strong>Summary:</strong></p>
+  <p>
+    Entity appears through reflective surfaces and demonstrates awareness of individuals observing it.
+    Personnel are reminded that seeing yourself does not confirm you are alone.
+  </p>
+
+  <p>
+    Current containment advice: do not trust reflections, especially when they appear
+    <span class="glitch-redacted leak-rare">slightly delayed</span>.
+  </p>
+</section>
+
+<section id="shadow" class="section dark-box classified-card">
+  <p class="file-tag">FILE-003</p>
+  <h2>🌑 The Shadow Entity</h2>
+
+  <p><strong>Designation:</strong> <span class="glitch-redacted leak-fast">THE SHADOW ENTITY</span></p>
+  <p><strong>Threat Level:</strong> <span class="glitch-redacted leak-medium">UNKNOWN</span></p>
+  <p><strong>Status:</strong> UNCONTAINED</p>
+
+  <p><strong>Summary:</strong></p>
+  <p>
+    A hostile presence associated with darkness, sudden movement, and unexplained peripheral sightings.
+    Attempts to document the entity frequently result in missing footage.
+  </p>
+
+  <p>
+    Archive note: if the shadow moves independently, do not attempt to
+    <span class="glitch-redacted leak-rare">follow it</span>.
+  </p>
+</section>
+
+<section id="infernal-duck" class="section classified-card">
+  <p class="file-tag">FILE-004</p>
+  <h2>🦆 Infernal Duck</h2>
+
+  <p><strong>Designation:</strong> <span class="glitch-redacted leak-fast">INFERNAL DUCK</span></p>
+  <p><strong>Threat Level:</strong> <span class="glitch-redacted leak-medium">ADMINISTRATIVE</span></p>
+  <p><strong>Status:</strong> PENDING PROCUREMENT</p>
+
+  <p><strong>Known Abilities:</strong></p>
+  <p>
+    Budget manipulation, committee generation, aggressive quacking,
+    unauthorised department creation, and unexplained memo duplication.
+  </p>
+
+  <p>
+    The Department of Anomalous Quacktivity denies that the Infernal Duck controls the department.
+    This denial was submitted by
+    <span class="glitch-redacted leak-rare">the Infernal Duck</span>.
+  </p>
+</section>
+
+<section id="project-moomoo" class="section dark-box classified-card">
+  <p class="file-tag">FILE-005</p>
+  <h2>🐶 Project Moo Moo</h2>
+
+  <p><strong>Designation:</strong> <span class="glitch-redacted leak-rare">PROJECT MOO MOO</span></p>
+  <p><strong>Classification:</strong> <span class="glitch-redacted leak-medium">TOP SECRET</span></p>
+  <p><strong>Status:</strong> ACTIVE</p>
+
+  <p><strong>Summary:</strong></p>
+  <p>
+    Public records identify Moo Moo as an ordinary dog.
+  </p>
+
+  <p>
+    Internal records identify Moo Moo as Supreme Director, final approval authority,
+    morale stabiliser, containment reviewer, and holder of
+    <span class="glitch-redacted leak-rare">unlimited executive clearance</span>.
+  </p>
+
+  <p>
+    Public Information Office claim: "Moo Moo is an ordinary dog."
+  </p>
+
+  <p>
+    Verification status:
+    <span class="glitch-redacted leak-fast">FALSE</span>
+  </p>
+</section>
+
+<section class="section">
+  <h2>📁 Related Documents</h2>
+
+  <a href="classified-access.html?file=broadcast" class="btn primary">Access Broadcast File</a>
+  <a href="classified-access.html?file=project-moomoo" class="btn">Access Project Moo Moo</a>
+  <a href="public-information-office.html" class="btn">Public Info</a>
+  <a href="incident-reports.html" class="btn">Incidents</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Phantom Realm Authority • These Files Do Not Exist</p>
+</footer>
+
+<script src="menu.js"></script>
+
+</body>
+</html>
