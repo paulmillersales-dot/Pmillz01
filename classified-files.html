@@ -71,6 +71,14 @@
         background: black;
         color: black;
       }
+
+      .locked-file {
+        display: none;
+      }
+
+      .access-granted .locked-file {
+          display: block;
+      }
     }
   </style>
 </head>
@@ -161,7 +169,7 @@
   </div>
 </section>
 
-<section id="broadcast" class="section dark-box classified-file">
+<section id="broadcast" class="section dark-box classified-file locked-file">
   <h2>FILE-001 — THE BROADCAST</h2>
 
   <p><strong>Designation:</strong> THE BROADCAST</p>
@@ -181,7 +189,7 @@
   <p><strong>Related Incident:</strong> PR-201</p>
 </section>
 
-<section id="mirror" class="section classified-file">
+<section id="mirror" class="section classified-file locked-file">
   <h2>FILE-002 — THE MIRROR THING</h2>
 
   <p><strong>Designation:</strong> THE MIRROR THING</p>
@@ -296,6 +304,15 @@
 </footer>
 
 <script src="menu.js"></script>
+
+  <script>
+const params = new URLSearchParams(window.location.search);
+const access = params.get("access");
+
+if (access === "granted") {
+    document.body.classList.add("access-granted");
+}
+</script>
 
 </body>
 </html>
