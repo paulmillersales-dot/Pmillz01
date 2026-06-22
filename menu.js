@@ -5,6 +5,10 @@ function loadMenu() {
  document.getElementById('site-menu').innerHTML = `
   <label for="menu-check" class="close-menu">×</label>
 
+  <div id="threat-level-menu" class="threat-box">
+      Loading Threat Level...
+  </div>
+
   <div class="menu-heading">MAIN</div>
   <a href="${prefix}index.html">🏠 Home</a>
   <a href="${prefix}about.html">👤 About</a>
