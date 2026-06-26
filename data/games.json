@@ -1,1 +1,34 @@
-
+[
+  {
+    "id": "visage",
+    "caseNumber": "0001",
+    "title": "Visage",
+    "status": "Contained",
+    "threatLevel": "Entity Level",
+    "streamed": true,
+    "completed": true,
+    "genres": ["Psychological", "Haunted House"],
+    "fear": 10,
+    "psychological": 10,
+    "jumpscares": 8,
+    "story": 9,
+    "verdict": "Completed on stream. This house can keep itself.",
+    "clips": []
+  },
+  {
+    "id": "callus",
+    "caseNumber": "0002",
+    "title": "CALLUS",
+    "status": "Active Investigation",
+    "threatLevel": "Unknown",
+    "streamed": true,
+    "completed": false,
+    "genres": ["Psychological"],
+    "fear": null,
+    "psychological": null,
+    "jumpscares": null,
+    "story": null,
+    "verdict": "Investigation currently underway.",
+    "clips": []
+  }
+]
