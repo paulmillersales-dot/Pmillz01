@@ -21,6 +21,7 @@ function loadMenu() {
   <div class="menu-heading">PHANTOM REALM</div>
   <a href="${prefix}entity-database.html">📁 Database</a>
   <a href="${prefix}entity-archive.html">📜 Archive</a>
+  <a href="${prefix}horror-archive.html">🎮 Horror Archive</a>
   <a href="${prefix}incident-timeline.html">📰 Timeline</a>
   <a href="${prefix}research-division.html">🧪 Research</a>
   <a href="${prefix}containment-command.html">🛡️ Containment</a>
