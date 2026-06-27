@@ -1,19 +1,31 @@
 let allGames = [];
 
+const list = document.getElementById("horror-list");
+const buttons = document.querySelectorAll(".horror-filters button");
+
 fetch("data/horror-games.json?cache=" + Date.now())
   .then(response => response.json())
   .then(data => {
     allGames = data.games || [];
     displayGames(allGames);
   })
-  .catch(() => {
-    document.getElementById("horror-list").innerHTML =
-      "<p>Unable to access horror archive.</p>";
+  .catch(error => {
+    console.error("Horror archive failed:", error);
+    list.innerHTML = "<p>Unable to access horror archive.</p>";
   });
 
-function displayGames(games) {
-  const list = document.getElementById("horror-list");
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
 
+    buttons.forEach(btn => btn.classList.remove("primary"));
+    button.classList.add("primary");
+
+    filterGames(filter);
+  });
+});
+
+function displayGames(games) {
   if (!games.length) {
     list.innerHTML = "<p>No records found.</p>";
     return;
@@ -42,13 +54,9 @@ function displayGames(games) {
 function filterGames(filter) {
   if (filter === "all") {
     displayGames(allGames);
-    return;
+  } else if (filter === "streamed") {
+    displayGames(allGames.filter(game => game.streamed === true));
+  } else {
+    displayGames(allGames.filter(game => game.status.toLowerCase() === filter));
   }
-
-  if (filter === "streamed") {
-    displayGames(allGames.filter(game => game.streamed));
-    return;
-  }
-
-  displayGames(allGames.filter(game => game.status === filter));
 }
