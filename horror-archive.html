@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Phantom Investigation Archive</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horror Archive | Phantom Millz</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="site-menu"></div>
+<input type="checkbox" id="menu-check">
 
-<main class="archive-page">
-  <h1>🎮 Phantom Investigation Archive</h1>
-  <p class="subtitle">Classified records of every horror investigation survived by PmillZ01.</p>
+<header class="site-header">
+  <div class="brand-text">PHANTOM MILLZ</div>
+  <label for="menu-check" class="menu-toggle">☰</label>
+</header>
 
-  <section class="archive-stats" id="archive-stats">
-    Loading archive statistics...
+<label for="menu-check" class="menu-overlay"></label>
+<aside class="side-menu" id="site-menu"></aside>
+
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">CLASSIFIED MEDIA RECORDS</p>
+    <h1>HORROR ARCHIVE</h1>
+    <p class="tagline">A cursed catalogue of games played, survived, abandoned, or waiting in the dark.</p>
+
+    <div class="buttons">
+      <button class="btn primary" onclick="filterGames('all')">All Files</button>
+      <button class="btn" onclick="filterGames('unplayed')">Unplayed</button>
+      <button class="btn" onclick="filterGames('playing')">Playing</button>
+      <button class="btn" onclick="filterGames('completed')">Completed</button>
+      <button class="btn" onclick="filterGames('streamed')">Streamed</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section dark-box">
+    <h2>📼 Archive Notice</h2>
+    <p>
+      These records contain horror games investigated by the Phantom Realm.
+      Scare ratings are subjective, biased, possibly dramatic, and absolutely correct.
+    </p>
   </section>
 
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Search investigations..."
-    class="archive-search"
-  >
-
-  <section id="game-list" class="game-grid">
-    Loading case files...
+  <section class="section">
+    <h2>Recovered Horror Files</h2>
+    <div id="horror-list" class="cards">
+      <p>Loading horror archive...</p>
+    </div>
   </section>
+
 </main>
 
-<script src="js/menu.js"></script>
-<script src="js/horror-archive.js"></script>
+<footer>
+  <p>© 2026 Phantom Millz • The Archive Watches</p>
+</footer>
+
+<script src="menu.js"></script>
+<script src="horror-archive.js"></script>
 
 </body>
 </html>
