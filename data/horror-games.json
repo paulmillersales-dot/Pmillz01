@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T01:25:35.604Z",
+  "updatedAt": "2026-06-27T02:02:28.348Z",
   "games": [
     {
       "appid": "3768760",
@@ -745,6 +745,29 @@
       }
     },
     {
+      "appid": "1281040",
+      "title": "Baby Steps",
+      "steamUrl": "https://store.steampowered.com/app/1281040/",
+      "steamTags": [
+        "Psychological Horror"
+      ],
+      "phantom": {
+        "owned": false,
+        "status": "unplayed",
+        "streamed": false,
+        "completed": false,
+        "scareRating": "",
+        "rating10": "",
+        "recommended": false,
+        "notes": "",
+        "vod": "",
+        "youtube": "",
+        "bestClip": "",
+        "lastPlayed": "",
+        "timesStreamed": 0
+      }
+    },
+    {
       "appid": "924970",
       "title": "Back 4 Blood?snr=1 7 7 240 150 1",
       "steamUrl": "https://store.steampowered.com/app/924970/",
@@ -961,6 +984,29 @@
       }
     },
     {
+      "appid": "2375780",
+      "title": "Beam Eye Tracker",
+      "steamUrl": "https://store.steampowered.com/app/2375780/",
+      "steamTags": [
+        "VR"
+      ],
+      "phantom": {
+        "owned": false,
+        "status": "unplayed",
+        "streamed": false,
+        "completed": false,
+        "scareRating": "",
+        "rating10": "",
+        "recommended": false,
+        "notes": "",
+        "vod": "",
+        "youtube": "",
+        "bestClip": "",
+        "lastPlayed": "",
+        "timesStreamed": 0
+      }
+    },
+    {
       "appid": "284160",
       "title": "BeamNGdrive?snr=1 7 7 240 150 1",
       "steamUrl": "https://store.steampowered.com/app/284160/",
@@ -1036,6 +1082,29 @@
       "steamUrl": "https://store.steampowered.com/app/3370870/",
       "steamTags": [
         "Psychological Horror"
+      ],
+      "phantom": {
+        "owned": false,
+        "status": "unplayed",
+        "streamed": false,
+        "completed": false,
+        "scareRating": "",
+        "rating10": "",
+        "recommended": false,
+        "notes": "",
+        "vod": "",
+        "youtube": "",
+        "bestClip": "",
+        "lastPlayed": "",
+        "timesStreamed": 0
+      }
+    },
+    {
+      "appid": "2599690",
+      "title": "Better Than Dead",
+      "steamUrl": "https://store.steampowered.com/app/2599690/",
+      "steamTags": [
+        "Dark"
       ],
       "phantom": {
         "owned": false,
@@ -3264,29 +3333,6 @@
       }
     },
     {
-      "appid": "1238060",
-      "title": "Dead Space 3?snr=1 7 7 240 150 1",
-      "steamUrl": "https://store.steampowered.com/app/1238060/",
-      "steamTags": [
-        "Survival Horror"
-      ],
-      "phantom": {
-        "owned": false,
-        "status": "unplayed",
-        "streamed": false,
-        "completed": false,
-        "scareRating": "",
-        "rating10": "",
-        "recommended": false,
-        "notes": "",
-        "vod": "",
-        "youtube": "",
-        "bestClip": "",
-        "lastPlayed": "",
-        "timesStreamed": 0
-      }
-    },
-    {
       "appid": "1693980",
       "title": "Dead Space?snr=1 7 7 240 150 1",
       "steamUrl": "https://store.steampowered.com/app/1693980/",
@@ -3838,6 +3884,29 @@
       "steamUrl": "https://store.steampowered.com/app/3138780/",
       "steamTags": [
         "Lovecraftian"
+      ],
+      "phantom": {
+        "owned": false,
+        "status": "unplayed",
+        "streamed": false,
+        "completed": false,
+        "scareRating": "",
+        "rating10": "",
+        "recommended": false,
+        "notes": "",
+        "vod": "",
+        "youtube": "",
+        "bestClip": "",
+        "lastPlayed": "",
+        "timesStreamed": 0
+      }
+    },
+    {
+      "appid": "1388880",
+      "title": "Doki Doki Literature Club Plus",
+      "steamUrl": "https://store.steampowered.com/app/1388880/",
+      "steamTags": [
+        "Psychological Horror"
       ],
       "phantom": {
         "owned": false,
@@ -4530,29 +4599,6 @@
         "Horror",
         "Survival Horror",
         "Co-op"
-      ],
-      "phantom": {
-        "owned": false,
-        "status": "unplayed",
-        "streamed": false,
-        "completed": false,
-        "scareRating": "",
-        "rating10": "",
-        "recommended": false,
-        "notes": "",
-        "vod": "",
-        "youtube": "",
-        "bestClip": "",
-        "lastPlayed": "",
-        "timesStreamed": 0
-      }
-    },
-    {
-      "appid": "2183930",
-      "title": "Expansion  Hearts of Iron IV Arms Against Tyranny?snr=1 7 7 240 150 1",
-      "steamUrl": "https://store.steampowered.com/app/2183930/",
-      "steamTags": [
-        "Survival Horror"
       ],
       "phantom": {
         "owned": false,
@@ -8356,6 +8402,29 @@
       }
     },
     {
+      "appid": "3046600",
+      "title": "Onimusha 2 Samurais Destiny",
+      "steamUrl": "https://store.steampowered.com/app/3046600/",
+      "steamTags": [
+        "Survival Horror"
+      ],
+      "phantom": {
+        "owned": false,
+        "status": "unplayed",
+        "streamed": false,
+        "completed": false,
+        "scareRating": "",
+        "rating10": "",
+        "recommended": false,
+        "notes": "",
+        "vod": "",
+        "youtube": "",
+        "bestClip": "",
+        "lastPlayed": "",
+        "timesStreamed": 0
+      }
+    },
+    {
       "appid": "1913370",
       "title": "OPERATOR?snr=1 7 7 240 150 1",
       "steamUrl": "https://store.steampowered.com/app/1913370/",
@@ -9285,29 +9354,6 @@
       "steamTags": [
         "Gore",
         "Zombies"
-      ],
-      "phantom": {
-        "owned": false,
-        "status": "unplayed",
-        "streamed": false,
-        "completed": false,
-        "scareRating": "",
-        "rating10": "",
-        "recommended": false,
-        "notes": "",
-        "vod": "",
-        "youtube": "",
-        "bestClip": "",
-        "lastPlayed": "",
-        "timesStreamed": 0
-      }
-    },
-    {
-      "appid": "882140",
-      "title": "Reentry  A Space Flight Simulator?snr=1 7 7 240 150 1",
-      "steamUrl": "https://store.steampowered.com/app/882140/",
-      "steamTags": [
-        "VR"
       ],
       "phantom": {
         "owned": false,
@@ -10302,7 +10348,8 @@
       "steamUrl": "https://store.steampowered.com/app/513710/",
       "steamTags": [
         "Violent",
-        "Zombies"
+        "Zombies",
+        "Gore"
       ],
       "phantom": {
         "owned": false,
@@ -10781,7 +10828,8 @@
       "title": "SOMA?snr=1 7 7 240 150 1",
       "steamUrl": "https://store.steampowered.com/app/282140/",
       "steamTags": [
-        "Lovecraftian"
+        "Lovecraftian",
+        "Survival Horror"
       ],
       "phantom": {
         "owned": false,
@@ -12131,29 +12179,6 @@
       "steamUrl": "https://store.steampowered.com/app/305620/",
       "steamTags": [
         "Survival Horror"
-      ],
-      "phantom": {
-        "owned": false,
-        "status": "unplayed",
-        "streamed": false,
-        "completed": false,
-        "scareRating": "",
-        "rating10": "",
-        "recommended": false,
-        "notes": "",
-        "vod": "",
-        "youtube": "",
-        "bestClip": "",
-        "lastPlayed": "",
-        "timesStreamed": 0
-      }
-    },
-    {
-      "appid": "1017180",
-      "title": "The Long Drive?snr=1 7 7 240 150 1",
-      "steamUrl": "https://store.steampowered.com/app/1017180/",
-      "steamTags": [
-        "Psychological Horror"
       ],
       "phantom": {
         "owned": false,
