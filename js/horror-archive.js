@@ -3,6 +3,7 @@ let allGames = [];
 const list = document.getElementById("horror-list");
 const buttons = document.querySelectorAll(".horror-filters button");
 
+
 fetch("data/horror-games.json?cache=" + Date.now())
   .then(response => response.json())
   .then(data => {
