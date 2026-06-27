@@ -1,3 +1,5 @@
+alert("Horror archive JS is loading");
+
 let allGames = [];
 
 const list = document.getElementById("horror-list");
