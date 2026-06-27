@@ -3,7 +3,7 @@ alert("Horror archive JS is loading");
 let allGames = [];
 
 const list = document.getElementById("horror-list");
-const buttons = document.querySelectorAll(".horror-filters button");
+const buttons = document.querySelectorAll("[data-filter]");
 
 
 fetch("data/horror-games.json?cache=" + Date.now())
@@ -20,6 +20,7 @@ fetch("data/horror-games.json?cache=" + Date.now())
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
+    console.log("Clicked filter:", filter);
 
     buttons.forEach(btn => btn.classList.remove("primary"));
     button.classList.add("primary");
