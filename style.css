@@ -194,6 +194,41 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
 }
 
+.archive-search {
+  width: min(90%, 500px);
+  padding: 14px 18px;
+  margin: 20px auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid crimson;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(220, 20, 60, 0.25);
+}
+
+.archive-search::placeholder {
+  color: #aaa;
+}
+
+.horror-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.horror-file::before {
+  content: "CLASSIFIED";
+  position: absolute;
+  top: 12px;
+  right: -34px;
+  transform: rotate(35deg);
+  border: 1px solid crimson;
+  color: crimson;
+  padding: 4px 40px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
 /* Phantom Forge */
 
 .containment-list {
