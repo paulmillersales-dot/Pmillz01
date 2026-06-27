@@ -1,0 +1,22 @@
+{
+  "games": [
+    {
+      "title": "Visage",
+      "platform": "Xbox Game Pass",
+      "status": "completed",
+      "streamed": true,
+      "scareRating": "S",
+      "tags": ["Psychological", "Paranormal", "Jumpscare"],
+      "notes": "Completed on stream. Cursed house. Bad vibes. Excellent nightmare fuel."
+    },
+    {
+      "title": "The Mortuary Assistant",
+      "platform": "Steam",
+      "status": "completed",
+      "streamed": true,
+      "scareRating": "S",
+      "tags": ["Demons", "Psychological", "Replayable"],
+      "notes": "Already streamed. Still deserves containment."
+    }
+  ]
+}
