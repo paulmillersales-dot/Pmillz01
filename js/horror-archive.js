@@ -1,6 +1,7 @@
 let allGames = [];
 let currentFilter = "all";
 
+
 const list = document.getElementById("horror-list");
 const buttons = document.querySelectorAll("[data-filter]");
 const searchInput = document.getElementById("horror-search");
