@@ -1,0 +1,30 @@
+{
+  "594330": {
+    "owned": true,
+    "streamed": true,
+    "completed": true,
+    "status": "completed",
+    "timesStreamed": 1,
+    "lastStreamed": "2026-06-28",
+    "scareRating": "S+",
+    "rating10": 10,
+    "recommended": true,
+    "notes": "Completed on stream. Absolutely cursed."
+  },
+  "3319120": {
+    "owned": true,
+    "streamed": true,
+    "completed": true,
+    "recommended": true,
+    "wishlist": false,
+    "status": "completed",
+    "timesStreamed": 1,
+    "lastStreamed": "2026-06-26",
+    "scareRating": "A",
+    "rating10": "7.5",
+    "bestClip": "https://www.twitch.tv/pmillz01/clip/FairSuccessfulPheasantSoBayed-b1CBtBeSMwiSi-LK",
+    "vod": "https://www.twitch.tv/videos/2806039942",
+    "youtube": "",
+    "notes": "Short game, some great jumpscares, not for people with a weak heart"
+  }
+}
