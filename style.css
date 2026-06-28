@@ -229,6 +229,23 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
 }
 
+.game-header-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto 25px;
+  border: 1px solid crimson;
+  box-shadow: 0 0 25px rgba(220, 20, 60, 0.35);
+}
+
+.game-dossier {
+  text-align: left;
+}
+
+.game-dossier h2 {
+  text-align: center;
+}
+
 /* Phantom Forge */
 
 .containment-list {
