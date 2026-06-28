@@ -95,7 +95,8 @@ function displayGames(games) {
       <p><strong>Classification:</strong> ${tags.join(", ") || "Unknown"}</p>
       <p>${phantom.notes || "No field notes recorded."}</p>
 
-      <a class="btn" href="${game.steamUrl}" target="_blank">View on Steam</a>
+      <a class="btn primary" href="game.html?appid=${game.appid}">Open Case File</a>
+      <a class="btn" href="${game.steamUrl}" target="_blank">Steam</a>
     `;
 
     list.appendChild(card);
